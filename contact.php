@@ -148,7 +148,10 @@ $htmlBody = <<<HTML
 HTML;
 
 // ── Send via PHPMailer (SMTP / SSL) ───────────────────────────────────────────
-$recipients = ['info@roboklabs.com', 'instatrades2408@gmail.com'];
+// Determine SMTPSecure mode from port: 465 = implicit SSL, anything else = STARTTLS.
+$smtpSecure = (defined('SMTP_PORT') && (int)SMTP_PORT === 465)
+    ? PHPMailer::ENCRYPTION_SMTPS
+    : PHPMailer::ENCRYPTION_STARTTLS;
 
 try {
     $mail = new PHPMailer(true);   // true = throw exceptions
@@ -159,7 +162,7 @@ try {
     $mail->SMTPAuth   = true;
     $mail->Username   = SMTP_USER;
     $mail->Password   = SMTP_PASS;
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;   // implicit SSL (port 465)
+    $mail->SMTPSecure = $smtpSecure;
     $mail->Port       = SMTP_PORT;
 
     // From / Reply-To
@@ -167,10 +170,8 @@ try {
     $mail->setFrom(SMTP_FROM, SMTP_FROM_NAME);
     $mail->addReplyTo($email, $firstName . ' ' . $lastName);
 
-    // Recipients
-    foreach ($recipients as $recipient) {
-        $mail->addAddress($recipient);
-    }
+    // Recipients — driven by config constants so no credentials are hardcoded.
+    $mail->addAddress(CONTACT_TO, CONTACT_TO_NAME);
 
     // Content
     $mail->isHTML(true);
