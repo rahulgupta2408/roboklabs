@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio – Robok Labs</title>
+  <meta name="description" content="Explore Robok Labs' portfolio of 300+ completed product development projects spanning medical, automotive, industrial, IoT, wearable, and consumer electronics."/>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="container topbar-inner">
+    <span>📍 1901-5000 Yonge Street, Toronto M2N7E9</span>
+    <span>📞 <a href="tel:+14379621288">+1 437 962 1288</a> &nbsp;|&nbsp; ✉️ <a href="mailto:info@roboblabs.com">info@roboblabs.com</a></span>
+  </div>
+</div>
+
+<!-- NAVIGATION -->
+<nav class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-text">Robok<span class="logo-accent">Labs</span></span>
+    </a>
+    <button class="nav-toggle" id="navToggle">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li class="dropdown">
+        <a href="services.html">Design ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="services.html#hardware">Electronics Hardware Design</a></li>
+          <li><a href="services.html#firmware">Firmware Development</a></li>
+          <li><a href="services.html#fpga">FPGA Design</a></li>
+          <li><a href="services.html#software">Software Development</a></li>
+          <li><a href="services.html#app">App Development</a></li>
+          <li><a href="services.html#industrial">Industrial Design</a></li>
+          <li><a href="services.html#mechanical">Mechanical Design</a></li>
+          <li><a href="services.html#uiux">UI/UX Design</a></li>
+          <li><a href="services.html#prototyping">Prototyping</a></li>
+          <li><a href="services.html#testing">Testing Support</a></li>
+          <li><a href="services.html#certification">Qualification &amp; Certification</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="manufacturing.html">Manufacturing ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="manufacturing.html#pcba">PCB Assembly</a></li>
+          <li><a href="manufacturing.html#boxbuild">Box Build Assembly</a></li>
+          <li><a href="manufacturing.html#xray">3D X-Ray Inspection</a></li>
+          <li><a href="manufacturing.html#contract">Electronics Contract Manufacturing</a></li>
+        </ul>
+      </li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li class="dropdown">
+        <a href="about.html">About ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="about.html#partners">Partners</a></li>
+          <li><a href="about.html#accreditation">Accreditation</a></li>
+          <li><a href="about.html#careers">Careers</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="btn-nav">Get a Quote</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <h1>OUR PORTFOLIO</h1>
+    <p>300+ completed product development projects across diverse industries</p>
+  </div>
+</section>
+
+<!-- FILTER BAR -->
+<section style="padding:32px 0; background:var(--light-bg); border-bottom:1px solid var(--border);">
+  <div class="container" style="text-align:center;">
+    <div class="filter-btns" id="filterBtns">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="iot">IoT</button>
+      <button class="filter-btn" data-filter="medical">Medical</button>
+      <button class="filter-btn" data-filter="industrial">Industrial</button>
+      <button class="filter-btn" data-filter="wearable">Wearable</button>
+      <button class="filter-btn" data-filter="automotive">Automotive</button>
+      <button class="filter-btn" data-filter="consumer">Consumer</button>
+    </div>
+  </div>
+</section>
+
+<style>
+.filter-btn {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  color: var(--text-muted);
+  padding: 9px 20px;
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 4px;
+  transition: all 0.2s ease;
+}
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--white);
+}
+.port-full-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.port-full-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 36px rgba(0,87,168,0.14);
+  border-color: var(--accent);
+}
+.port-full-img {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  position: relative;
+}
+.port-full-body { padding: 22px; }
+.port-full-body h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; color: var(--dark); }
+.port-full-body p  { font-size: 0.87rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 12px; }
+.port-tag {
+  display: inline-block;
+  background: var(--light-bg);
+  color: var(--primary);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  padding: 3px 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  margin-right: 4px;
+  margin-bottom: 4px;
+}
+</style>
+
+<!-- PORTFOLIO GRID -->
+<section class="section-pad">
+  <div class="container">
+    <div class="portfolio-grid" id="portfolioGrid">
+
+      <div class="port-full-card" data-category="industrial cleantech">
+        <div class="port-full-img" style="background:linear-gradient(135deg,#0a2540,#0057a8);">🌿</div>
+        <div class="port-full-body">
+          <h3>CO₂ Mineralization Technology</h3>
+          <p>Custom electronics and firmware for carbon capture and concrete curing technology used in industrial applications worldwide.</p>
+          <span class="port-tag">Industrial</span><span class="port-tag">CleanTech</span><span class="port-tag">Hardware Design</span>
+        </div>
+      </div>
+
+      <div class="port-full-card" data-category="wearable iot">
+        <div class="port-full-img" style="background:linear-gradient(135deg,#0d2e45,#003d7a);">⌚</div>
+        <div class="port-full-body">
+          <h3>Smart Wearable Security Device</h3>
+          <p>A wearable personal security IoT device featuring BLE connectivity, GPS tracking, and cloud-based alert systems.</p>
+          <span class="port-tag">Wearable</span><span class="port-tag">IoT</span><span class="port-tag">Firmware</span>
+        </div>
+      </div>
+
+      <div class="port-full-card" data-category="consumer iot">
+        <div class="port-full-img" style="background:linear-gradient(135deg,#052030,#0077b6);">📱</div>
+        <div class="port-full-body">
+          <h3>Smart Payment Terminal</h3>
+          <p>A simpler and smarter way to give — a compact NFC-enabled donation terminal with mobile app companion and cloud backend.</p>
+          <span class="port-tag">Consumer</span><span class="port-tag">IoT</span><span class="port-tag">App Dev</span>
+        </div>
+      </div>
+
+      <div class="port-full-card" data-category="consumer">
+        <div class="port-full-img" style="background:linear-gradient(135deg,#1e3a5f,#0057a8);">🏈</div>
+        <div class="port-full-body">
+          <h3>Play Calling Smart System</h3>
+          <p>Electronics, firmware, and mobile app for a next-generation sports play-calling system used by professional coaching teams.</p>
+          <span class="port-tag">Consumer</span><span class="port-tag">Firmware</span><span class="port-tag">App Dev</span>
+        </div>
+      </div>
+
+      <div class="port-full-card" data-category="wearable medical">
+        <div class="port-full-img" style="background:linear-gradient(135deg,#0a2540,#003d7a);">🛡️</div>
+        <div class="port-full-body">
+          <h3>Recreational Electronic Chest Guard</h3>
+          <p>A smart wearable chest guard for combat sports, integrating impact sensing electronics with real-time scoring algorithms.</p>
+          <span class="port-tag">Wearable</span><span class="port-tag">Medical</span><span class="port-tag">Hardware Design</span>
+        </div>
+      </div>
+
+      <div class="port-full-card" data-category="industrial iot">
+        <div class="port-full-img" style="background:linear-gradient(135deg,#0d1b2a,#1e3a5f);">🏭</div>
+        <div class="port-full-body">
+          <h3>Industrial Automation Controller</h3>
+          <p>A ruggedized industrial controller with multi-axis motion control, remote monitoring via 4G LTE, and cloud data logging.</p>
+          <span class="port-tag">Industrial</span><span class="port-tag">IoT</span><span class="port-tag">FPGA</span>
+        </div>
+      </div>
+
+      <div class="port-full-card" data-category="medical iot">
+        <div class="port-full-img" style="background:linear-gradient(135deg,#052030,#0057a8);">❤️</div>
+        <div class="port-full-body">
+          <h3>Remote Patient Monitoring Device</h3>
+          <p>FDA-class medical device for remote patient vitals monitoring with HIPAA-compliant cloud data transmission and physician dashboard.</p>
+          <span class="port-tag">Medical</span><span class="port-tag">IoT</span><span class="port-tag">Certification</span>
+        </div>
+      </div>
+
+      <div class="port-full-card" data-category="automotive iot">
+        <div class="port-full-img" style="background:linear-gradient(135deg,#0a2540,#0077b6);">🚗</div>
+        <div class="port-full-body">
+          <h3>4G LTE Vehicle Telematics Module</h3>
+          <p>A compact automotive-grade telematics module with GPS, accelerometer, CAN bus interface, and over-the-air firmware updates.</p>
+          <span class="port-tag">Automotive</span><span class="port-tag">IoT</span><span class="port-tag">Firmware</span>
+        </div>
+      </div>
+
+      <div class="port-full-card" data-category="consumer iot">
+        <div class="port-full-img" style="background:linear-gradient(135deg,#0d2e45,#003d7a);">💡</div>
+        <div class="port-full-body">
+          <h3>Smart Lighting Control System</h3>
+          <p>An advanced home automation lighting controller with voice assistant integration, circadian rhythm scheduling, and energy monitoring.</p>
+          <span class="port-tag">Consumer</span><span class="port-tag">IoT</span><span class="port-tag">App Dev</span>
+        </div>
+      </div>
+
+      <div class="port-full-card" data-category="industrial cleantech">
+        <div class="port-full-img" style="background:linear-gradient(135deg,#052030,#0057a8);">⚡</div>
+        <div class="port-full-body">
+          <h3>Hydrogen Fuel Cell Controller</h3>
+          <p>Custom power management and control electronics for a next-generation hydrogen fuel cell system targeting commercial fleet vehicles.</p>
+          <span class="port-tag">Industrial</span><span class="port-tag">CleanTech</span><span class="port-tag">Hardware Design</span>
+        </div>
+      </div>
+
+      <div class="port-full-card" data-category="medical wearable">
+        <div class="port-full-img" style="background:linear-gradient(135deg,#1e3a5f,#0077b6);">🧬</div>
+        <div class="port-full-body">
+          <h3>Biosignal Acquisition Platform</h3>
+          <p>Multi-channel biosignal (ECG, EMG, EEG) acquisition hardware with wireless streaming to tablet application for clinical research.</p>
+          <span class="port-tag">Medical</span><span class="port-tag">Wearable</span><span class="port-tag">FPGA</span>
+        </div>
+      </div>
+
+      <div class="port-full-card" data-category="industrial iot">
+        <div class="port-full-img" style="background:linear-gradient(135deg,#0a2540,#003d7a);">🌾</div>
+        <div class="port-full-body">
+          <h3>Smart Agriculture Sensor Network</h3>
+          <p>A LoRaWAN-based agricultural sensor network for soil moisture, temperature, and nutrient monitoring across large farm areas.</p>
+          <span class="port-tag">Industrial</span><span class="port-tag">AgriTech</span><span class="port-tag">IoT</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STATS BANNER -->
+<section style="background:linear-gradient(135deg,var(--primary),var(--accent)); padding:60px 0; text-align:center; color:white;">
+  <div class="container">
+    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:32px;">
+      <div>
+        <div style="font-size:2.8rem; font-weight:800; margin-bottom:8px;">300+</div>
+        <div style="opacity:0.85; font-size:0.95rem;">Completed Projects</div>
+      </div>
+      <div>
+        <div style="font-size:2.8rem; font-weight:800; margin-bottom:8px;">15+</div>
+        <div style="opacity:0.85; font-size:0.95rem;">Industries Served</div>
+      </div>
+      <div>
+        <div style="font-size:2.8rem; font-weight:800; margin-bottom:8px;">98%</div>
+        <div style="opacity:0.85; font-size:0.95rem;">Client Satisfaction</div>
+      </div>
+      <div>
+        <div style="font-size:2.8rem; font-weight:800; margin-bottom:8px;">12+</div>
+        <div style="opacity:0.85; font-size:0.95rem;">Years of Experience</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" style="background:var(--dark);">
+  <div class="container">
+    <h2>Have a project in mind?</h2>
+    <p>Let's build something great together. Our team is ready to bring your idea to life.</p>
+    <a href="contact.html" class="btn-primary">Start Your Project</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <div class="footer-logo">Robok<span>Labs</span></div>
+      <p>Toronto-based product development &amp; manufacturing house. Engineering excellence from concept to production.</p>
+      <div class="footer-social">
+        <a href="#">LinkedIn</a><a href="#">Twitter</a><a href="#">Facebook</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html#partners">Partners</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html#careers">Careers</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="services.html#hardware">Hardware Design</a></li>
+        <li><a href="services.html#firmware">Firmware Development</a></li>
+        <li><a href="services.html#software">Software Development</a></li>
+        <li><a href="manufacturing.html#pcba">PCB Assembly</a></li>
+        <li><a href="manufacturing.html#boxbuild">Box Build Assembly</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li>📍 1901-5000 Yonge St,<br/>Toronto M2N7E9</li>
+        <li>📞 <a href="tel:+14379621288">+1 437 962 1288</a></li>
+        <li>✉️ <a href="mailto:info@roboblabs.com">info@roboblabs.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>©2026 Robok Labs Inc., Toronto, Canada</p>
+      <div><a href="#">Privacy Policy</a><a href="#">Accessibility</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+// Portfolio filter
+const filterBtns = document.querySelectorAll('.filter-btn');
+const portCards  = document.querySelectorAll('#portfolioGrid .port-full-card');
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    portCards.forEach(card => {
+      const cats = card.dataset.category || '';
+      if (filter === 'all' || cats.includes(filter)) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>
