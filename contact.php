@@ -22,7 +22,7 @@ use PHPMailer\PHPMailer\Exception as MailerException;
 
 // ── Load SMTP credentials ─────────────────────────────────────────────────────
 // Preferred location: ONE LEVEL ABOVE the web root so it is never web-accessible.
-// e.g. /home/earthyf/config.php  when the site lives at /home/earthyf/roboklabs.com/
+// e.g. /home/earthlyf/config.php  when the site lives at /home/earthlyf/roboklabs.com/
 // Falls back to the same directory as this file (for local dev / alternative layouts).
 $configFile = dirname(__DIR__) . '/config.php';
 if (!file_exists($configFile)) {
