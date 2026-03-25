@@ -82,12 +82,12 @@
   <div class="container" style="text-align:center;">
     <div class="filter-btns" id="filterBtns">
       <button class="filter-btn active" data-filter="all">All Projects</button>
-      <button class="filter-btn" data-filter="iot">IoT</button>
-      <button class="filter-btn" data-filter="medical">Medical</button>
-      <button class="filter-btn" data-filter="industrial">Industrial</button>
-      <button class="filter-btn" data-filter="wearable">Wearable</button>
       <button class="filter-btn" data-filter="automotive">Automotive</button>
-      <button class="filter-btn" data-filter="consumer">Consumer</button>
+      <button class="filter-btn" data-filter="industrial">Industrial</button>
+      <button class="filter-btn" data-filter="energy">Energy</button>
+      <button class="filter-btn" data-filter="safety">Safety</button>
+      <button class="filter-btn" data-filter="embedded">Embedded</button>
+      <button class="filter-btn" data-filter="manufacturing">Manufacturing</button>
     </div>
   </div>
 </section>
@@ -155,111 +155,183 @@
   <div class="container">
     <div class="portfolio-grid" id="portfolioGrid">
 
-      <div class="port-full-card" data-category="industrial cleantech">
-        <div class="port-full-img" style="background:linear-gradient(135deg,#0a2540,#0057a8);">🌿</div>
+      <div class="port-full-card" data-category="automotive embedded">
+        <div class="port-full-img" style="background:linear-gradient(135deg,#0a2540,#0057a8);">🔥</div>
         <div class="port-full-body">
-          <h3>CO₂ Mineralization Technology</h3>
-          <p>Custom electronics and firmware for carbon capture and concrete curing technology used in industrial applications worldwide.</p>
-          <span class="port-tag">Industrial</span><span class="port-tag">CleanTech</span><span class="port-tag">Hardware Design</span>
+          <h3>Ignition Control Units (ICU)</h3>
+          <p>Designed and developed ignition control systems for 2W/3W vehicles with precise timing and durability in harsh environments. Optimized for cost, reliability, and mass production across OEM platforms.</p>
+          <span class="port-tag">Automotive</span><span class="port-tag">Embedded</span><span class="port-tag">Hardware Design</span>
         </div>
       </div>
 
-      <div class="port-full-card" data-category="wearable iot">
-        <div class="port-full-img" style="background:linear-gradient(135deg,#0d2e45,#003d7a);">⌚</div>
+      <div class="port-full-card" data-category="automotive energy">
+        <div class="port-full-img" style="background:linear-gradient(135deg,#0d2e45,#003d7a);">⚡</div>
         <div class="port-full-body">
-          <h3>Smart Wearable Security Device</h3>
-          <p>A wearable personal security IoT device featuring BLE connectivity, GPS tracking, and cloud-based alert systems.</p>
-          <span class="port-tag">Wearable</span><span class="port-tag">IoT</span><span class="port-tag">Firmware</span>
+          <h3>Voltage Regulators &amp; Rectifiers</h3>
+          <p>Developed robust power regulation modules for automotive electrical systems ensuring stable output under wide input variations. Focused on thermal performance, surge protection, and long field life.</p>
+          <span class="port-tag">Automotive</span><span class="port-tag">Energy</span><span class="port-tag">Hardware Design</span>
         </div>
       </div>
 
-      <div class="port-full-card" data-category="consumer iot">
-        <div class="port-full-img" style="background:linear-gradient(135deg,#052030,#0077b6);">📱</div>
+      <div class="port-full-card" data-category="automotive">
+        <div class="port-full-img" style="background:linear-gradient(135deg,#052030,#0077b6);">💡</div>
         <div class="port-full-body">
-          <h3>Smart Payment Terminal</h3>
-          <p>A simpler and smarter way to give — a compact NFC-enabled donation terminal with mobile app companion and cloud backend.</p>
-          <span class="port-tag">Consumer</span><span class="port-tag">IoT</span><span class="port-tag">App Dev</span>
+          <h3>Electronic Flashers</h3>
+          <p>Designed solid-state flasher units replacing electromechanical systems for improved lifespan and consistent performance. Delivered compact, vibration-resistant designs suitable for large-scale deployment.</p>
+          <span class="port-tag">Automotive</span><span class="port-tag">Hardware Design</span><span class="port-tag">Manufacturing</span>
         </div>
       </div>
 
-      <div class="port-full-card" data-category="consumer">
-        <div class="port-full-img" style="background:linear-gradient(135deg,#1e3a5f,#0057a8);">🏈</div>
+      <div class="port-full-card" data-category="automotive energy">
+        <div class="port-full-img" style="background:linear-gradient(135deg,#1e3a5f,#0057a8);">🔋</div>
         <div class="port-full-body">
-          <h3>Play Calling Smart System</h3>
-          <p>Electronics, firmware, and mobile app for a next-generation sports play-calling system used by professional coaching teams.</p>
-          <span class="port-tag">Consumer</span><span class="port-tag">Firmware</span><span class="port-tag">App Dev</span>
+          <h3>DC-DC Converters (Automotive Grade)</h3>
+          <p>Engineered isolated and non-isolated converters for vehicle subsystems with wide input voltage ranges. Designed for high efficiency, surge immunity, and compliance with automotive transient standards.</p>
+          <span class="port-tag">Automotive</span><span class="port-tag">Energy</span><span class="port-tag">Hardware Design</span>
         </div>
       </div>
 
-      <div class="port-full-card" data-category="wearable medical">
-        <div class="port-full-img" style="background:linear-gradient(135deg,#0a2540,#003d7a);">🛡️</div>
-        <div class="port-full-body">
-          <h3>Recreational Electronic Chest Guard</h3>
-          <p>A smart wearable chest guard for combat sports, integrating impact sensing electronics with real-time scoring algorithms.</p>
-          <span class="port-tag">Wearable</span><span class="port-tag">Medical</span><span class="port-tag">Hardware Design</span>
-        </div>
-      </div>
-
-      <div class="port-full-card" data-category="industrial iot">
+      <div class="port-full-card" data-category="industrial embedded">
         <div class="port-full-img" style="background:linear-gradient(135deg,#0d1b2a,#1e3a5f);">🏭</div>
         <div class="port-full-body">
-          <h3>Industrial Automation Controller</h3>
-          <p>A ruggedized industrial controller with multi-axis motion control, remote monitoring via 4G LTE, and cloud data logging.</p>
-          <span class="port-tag">Industrial</span><span class="port-tag">IoT</span><span class="port-tag">FPGA</span>
+          <h3>Industrial Automation Control Systems</h3>
+          <p>Developed custom control systems for machinery and process automation using embedded controllers and sensor integration. Enabled real-time monitoring, improved efficiency, and reduced manual intervention.</p>
+          <span class="port-tag">Industrial</span><span class="port-tag">Embedded</span><span class="port-tag">Automation</span>
         </div>
       </div>
 
-      <div class="port-full-card" data-category="medical iot">
-        <div class="port-full-img" style="background:linear-gradient(135deg,#052030,#0057a8);">❤️</div>
+      <div class="port-full-card" data-category="industrial embedded">
+        <div class="port-full-img" style="background:linear-gradient(135deg,#0a2540,#003d7a);">📡</div>
         <div class="port-full-body">
-          <h3>Remote Patient Monitoring Device</h3>
-          <p>FDA-class medical device for remote patient vitals monitoring with HIPAA-compliant cloud data transmission and physician dashboard.</p>
-          <span class="port-tag">Medical</span><span class="port-tag">IoT</span><span class="port-tag">Certification</span>
+          <h3>SCADA Data Acquisition &amp; Transfer Systems</h3>
+          <p>Designed data acquisition modules for remote monitoring and integration with SCADA platforms. Focused on reliable communication over RS485, Modbus, and industrial networks.</p>
+          <span class="port-tag">Industrial</span><span class="port-tag">SCADA</span><span class="port-tag">Embedded</span>
         </div>
       </div>
 
-      <div class="port-full-card" data-category="automotive iot">
-        <div class="port-full-img" style="background:linear-gradient(135deg,#0a2540,#0077b6);">🚗</div>
+      <div class="port-full-card" data-category="industrial manufacturing">
+        <div class="port-full-img" style="background:linear-gradient(135deg,#052030,#0057a8);">🔧</div>
         <div class="port-full-body">
-          <h3>4G LTE Vehicle Telematics Module</h3>
-          <p>A compact automotive-grade telematics module with GPS, accelerometer, CAN bus interface, and over-the-air firmware updates.</p>
-          <span class="port-tag">Automotive</span><span class="port-tag">IoT</span><span class="port-tag">Firmware</span>
+          <h3>Industrial Test Jigs &amp; Fixtures</h3>
+          <p>Built automated testing setups for production lines to validate electronic assemblies. Improved quality control, reduced human error, and increased throughput.</p>
+          <span class="port-tag">Industrial</span><span class="port-tag">Manufacturing</span><span class="port-tag">Testing</span>
         </div>
       </div>
 
-      <div class="port-full-card" data-category="consumer iot">
-        <div class="port-full-img" style="background:linear-gradient(135deg,#0d2e45,#003d7a);">💡</div>
+      <div class="port-full-card" data-category="industrial embedded">
+        <div class="port-full-img" style="background:linear-gradient(135deg,#0d2e45,#0077b6);">📊</div>
         <div class="port-full-body">
-          <h3>Smart Lighting Control System</h3>
-          <p>An advanced home automation lighting controller with voice assistant integration, circadian rhythm scheduling, and energy monitoring.</p>
-          <span class="port-tag">Consumer</span><span class="port-tag">IoT</span><span class="port-tag">App Dev</span>
+          <h3>Industrial IoT Monitoring Systems</h3>
+          <p>Developed edge-based monitoring systems for capturing machine health and operational data. Enabled predictive maintenance and remote diagnostics capabilities.</p>
+          <span class="port-tag">Industrial</span><span class="port-tag">IoT</span><span class="port-tag">Embedded</span>
         </div>
       </div>
 
-      <div class="port-full-card" data-category="industrial cleantech">
-        <div class="port-full-img" style="background:linear-gradient(135deg,#052030,#0057a8);">⚡</div>
+      <div class="port-full-card" data-category="energy industrial">
+        <div class="port-full-img" style="background:linear-gradient(135deg,#1e3a5f,#0077b6);">⚡</div>
         <div class="port-full-body">
-          <h3>Hydrogen Fuel Cell Controller</h3>
-          <p>Custom power management and control electronics for a next-generation hydrogen fuel cell system targeting commercial fleet vehicles.</p>
-          <span class="port-tag">Industrial</span><span class="port-tag">CleanTech</span><span class="port-tag">Hardware Design</span>
+          <h3>High Power DC-DC Converter (1kW Platform)</h3>
+          <p>Designed a high-efficiency isolated converter platform for industrial applications. Focused on protection mechanisms, thermal design, and long-term reliability.</p>
+          <span class="port-tag">Energy</span><span class="port-tag">Industrial</span><span class="port-tag">Hardware Design</span>
         </div>
       </div>
 
-      <div class="port-full-card" data-category="medical wearable">
-        <div class="port-full-img" style="background:linear-gradient(135deg,#1e3a5f,#0077b6);">🧬</div>
+      <div class="port-full-card" data-category="energy">
+        <div class="port-full-img" style="background:linear-gradient(135deg,#0a2540,#0057a8);">🔋</div>
         <div class="port-full-body">
-          <h3>Biosignal Acquisition Platform</h3>
-          <p>Multi-channel biosignal (ECG, EMG, EEG) acquisition hardware with wireless streaming to tablet application for clinical research.</p>
-          <span class="port-tag">Medical</span><span class="port-tag">Wearable</span><span class="port-tag">FPGA</span>
+          <h3>Battery-Integrated Power Systems</h3>
+          <p>Developed power management systems integrating battery inputs with controlled outputs. Optimized for stability, safety, and efficient energy utilization.</p>
+          <span class="port-tag">Energy</span><span class="port-tag">Hardware Design</span><span class="port-tag">Embedded</span>
         </div>
       </div>
 
-      <div class="port-full-card" data-category="industrial iot">
-        <div class="port-full-img" style="background:linear-gradient(135deg,#0a2540,#003d7a);">🌾</div>
+      <div class="port-full-card" data-category="safety">
+        <div class="port-full-img" style="background:linear-gradient(135deg,#0d1b2a,#1e3a5f);">🚨</div>
         <div class="port-full-body">
-          <h3>Smart Agriculture Sensor Network</h3>
-          <p>A LoRaWAN-based agricultural sensor network for soil moisture, temperature, and nutrient monitoring across large farm areas.</p>
-          <span class="port-tag">Industrial</span><span class="port-tag">AgriTech</span><span class="port-tag">IoT</span>
+          <h3>Fire Alarm Control Panels</h3>
+          <p>Designed multi-zone fire alarm systems with sensor integration and fail-safe mechanisms. Ensured compliance with safety standards and high reliability in critical environments.</p>
+          <span class="port-tag">Safety</span><span class="port-tag">Hardware Design</span><span class="port-tag">Embedded</span>
+        </div>
+      </div>
+
+      <div class="port-full-card" data-category="safety">
+        <div class="port-full-img" style="background:linear-gradient(135deg,#052030,#003d7a);">🔍</div>
+        <div class="port-full-body">
+          <h3>Smoke Detection Systems</h3>
+          <p>Developed sensitive and reliable smoke detection electronics for early hazard detection. Focused on accuracy, low false alarms, and long operational life.</p>
+          <span class="port-tag">Safety</span><span class="port-tag">Hardware Design</span><span class="port-tag">Embedded</span>
+        </div>
+      </div>
+
+      <div class="port-full-card" data-category="safety">
+        <div class="port-full-img" style="background:linear-gradient(135deg,#0a2540,#0077b6);">🏥</div>
+        <div class="port-full-body">
+          <h3>Nurse Call Systems</h3>
+          <p>Engineered communication systems for hospitals enabling patient-to-staff alerts. Designed for reliability, scalability, and easy integration into healthcare environments.</p>
+          <span class="port-tag">Safety</span><span class="port-tag">Healthcare</span><span class="port-tag">Embedded</span>
+        </div>
+      </div>
+
+      <div class="port-full-card" data-category="embedded automotive industrial">
+        <div class="port-full-img" style="background:linear-gradient(135deg,#0d2e45,#0057a8);">💻</div>
+        <div class="port-full-body">
+          <h3>Custom Embedded Control Units</h3>
+          <p>Designed microcontroller-based systems for various applications including automotive and industrial controls. Integrated communication protocols like CAN, UART, and RS485.</p>
+          <span class="port-tag">Embedded</span><span class="port-tag">Automotive</span><span class="port-tag">Industrial</span>
+        </div>
+      </div>
+
+      <div class="port-full-card" data-category="embedded industrial">
+        <div class="port-full-img" style="background:linear-gradient(135deg,#1e3a5f,#003d7a);">📈</div>
+        <div class="port-full-body">
+          <h3>Data Logging Systems</h3>
+          <p>Developed systems for capturing and storing operational data from machines and sensors. Enabled diagnostics, analytics, and performance optimization.</p>
+          <span class="port-tag">Embedded</span><span class="port-tag">Industrial</span><span class="port-tag">Firmware</span>
+        </div>
+      </div>
+
+      <div class="port-full-card" data-category="manufacturing automotive">
+        <div class="port-full-img" style="background:linear-gradient(135deg,#052030,#0077b6);">🔌</div>
+        <div class="port-full-body">
+          <h3>Wiring Harness Design &amp; Development</h3>
+          <p>Designed and validated wiring harness systems for automotive and industrial applications. Optimized routing, durability, and manufacturability.</p>
+          <span class="port-tag">Manufacturing</span><span class="port-tag">Automotive</span><span class="port-tag">Hardware Design</span>
+        </div>
+      </div>
+
+      <div class="port-full-card" data-category="manufacturing">
+        <div class="port-full-img" style="background:linear-gradient(135deg,#0a2540,#003d7a);">⚙️</div>
+        <div class="port-full-body">
+          <h3>Electro-Mechanical Product Design</h3>
+          <p>Delivered complete product designs integrating electronics, enclosures, and mechanical systems. Focused on production readiness, including injection molding and casting.</p>
+          <span class="port-tag">Manufacturing</span><span class="port-tag">Hardware Design</span><span class="port-tag">Mechanical</span>
+        </div>
+      </div>
+
+      <div class="port-full-card" data-category="manufacturing industrial">
+        <div class="port-full-img" style="background:linear-gradient(135deg,#0d1b2a,#0057a8);">🏗️</div>
+        <div class="port-full-body">
+          <h3>Production Line Automation Solutions</h3>
+          <p>Designed semi-automated and automated solutions for manufacturing environments. Improved consistency, reduced cycle time, and enhanced scalability.</p>
+          <span class="port-tag">Manufacturing</span><span class="port-tag">Industrial</span><span class="port-tag">Automation</span>
+        </div>
+      </div>
+
+      <div class="port-full-card" data-category="embedded industrial">
+        <div class="port-full-img" style="background:linear-gradient(135deg,#0d2e45,#0077b6);">🌐</div>
+        <div class="port-full-body">
+          <h3>Digital Twin System</h3>
+          <p>Built a real-time digital twin integrating physical servo systems with cloud dashboards. Combined physics modeling, live data ingestion, and visualization for predictive insights.</p>
+          <span class="port-tag">Embedded</span><span class="port-tag">Industrial</span><span class="port-tag">Advanced</span>
+        </div>
+      </div>
+
+      <div class="port-full-card" data-category="embedded industrial">
+        <div class="port-full-img" style="background:linear-gradient(135deg,#1e3a5f,#0057a8);">🔗</div>
+        <div class="port-full-body">
+          <h3>Edge-Based Monitoring &amp; Control Architecture</h3>
+          <p>Designed hybrid edge-cloud systems for real-time decision making in industrial environments. Focused on low latency, reliability, and scalable architecture.</p>
+          <span class="port-tag">Embedded</span><span class="port-tag">Industrial</span><span class="port-tag">Advanced</span>
         </div>
       </div>
 
