@@ -63,6 +63,12 @@ describe('Contact form API', () => {
   let baseUrl;
 
   before(async () => {
+    // Set stub SMTP credentials so the credential check passes in all tests.
+    // The nodemailer transport is already mocked above; these values are never
+    // used to make a real SMTP connection.
+    process.env.SMTP_USER = 'test@example.com';
+    process.env.SMTP_PASS = 'test-password';
+
     await new Promise((resolve) => {
       server = app.listen(0, '127.0.0.1', () => {
         const { port } = server.address();
@@ -73,6 +79,9 @@ describe('Contact form API', () => {
   });
 
   after(async () => {
+    delete process.env.SMTP_USER;
+    delete process.env.SMTP_PASS;
+
     await new Promise((resolve, reject) =>
       server.close((err) => (err ? reject(err) : resolve()))
     );
@@ -95,6 +104,33 @@ describe('Contact form API', () => {
   });
 
   // ── Validation ─────────────────────────────────────────────────────────────
+
+  test('POST /api/contact returns 503 when SMTP credentials are not configured', async () => {
+    // Temporarily remove SMTP credentials to simulate an unconfigured server.
+    const savedUser = process.env.SMTP_USER;
+    const savedPass = process.env.SMTP_PASS;
+    delete process.env.SMTP_USER;
+    delete process.env.SMTP_PASS;
+
+    try {
+      const { status, body } = await jsonPost(`${baseUrl}/api/contact`, {
+        firstName: 'John', lastName: 'Doe', email: 'john@example.com',
+        message: 'Hello from the test suite.',
+      });
+      assert.equal(status, 503);
+      assert.equal(body.ok, false);
+      assert.ok(typeof body.error === 'string' && body.error.length > 0,
+        `Response should include a non-empty error string, got: ${JSON.stringify(body.error)}`);
+      assert.ok(
+        body.error.toLowerCase().includes('unavailable') || body.error.toLowerCase().includes('service'),
+        `Error message should indicate the service is unavailable, got: ${body.error}`,
+      );
+    } finally {
+      // Always restore the credentials so subsequent tests are unaffected.
+      process.env.SMTP_USER = savedUser;
+      process.env.SMTP_PASS = savedPass;
+    }
+  });
 
   test('POST /api/contact returns 400 when required fields are missing', async () => {
     const { status, body } = await jsonPost(`${baseUrl}/api/contact`, {
