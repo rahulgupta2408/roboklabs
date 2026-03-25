@@ -113,6 +113,8 @@ define('SMTP_USER',      'info@roboklabs.com');
 define('SMTP_PASS',      'YOUR-ACTUAL-MAILBOX-PASSWORD');   // ← only thing to change
 define('SMTP_FROM',      'info@roboklabs.com');
 define('SMTP_FROM_NAME', 'Robok Labs Website');
+define('CONTACT_TO',     'instatrades2408@gmail.com,info@roboklabs.com');
+define('CONTACT_TO_NAME','Robok Labs');
 ```
 
 4. Save. The file now lives at `/home/earthlyf/config.php` — above the web root and completely private.
