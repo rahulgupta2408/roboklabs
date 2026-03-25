@@ -1,3 +1,9 @@
 node_modules/
 .env
 *.log
+
+# PHP – real config file with SMTP secrets (use config.example.php as a template)
+config.php
+
+# Composer vendor directory
+vendor/

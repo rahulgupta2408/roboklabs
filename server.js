@@ -1,4 +1,7 @@
 // ===== ROBOK LABS – CONTACT FORM SERVER =====
+// NOTE: This file is for Node.js hosting ONLY (e.g., Render, Railway, Fly.io).
+// For HostPapa cPanel shared hosting, use contact.php + config.php instead.
+// See DEPLOYMENT.md for setup instructions.
 'use strict';
 
 const path = require('path');

@@ -1,0 +1,10 @@
+{
+  "name": "roboklabs/website",
+  "description": "Robok Labs website – PHP contact form backend",
+  "require": {
+    "phpmailer/phpmailer": "^6.9"
+  },
+  "config": {
+    "optimize-autoloader": true
+  }
+}
