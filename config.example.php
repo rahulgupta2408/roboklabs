@@ -20,3 +20,8 @@ define('SMTP_FROM', 'info@roboklabs.com');
 
 // Display name shown alongside the From address
 define('SMTP_FROM_NAME', 'Robok Labs Website');
+
+// Comma-separated list of recipient addresses for contact form submissions.
+// Example (single):   define('CONTACT_TO', 'you@example.com');
+// Example (multiple): define('CONTACT_TO', 'you@example.com,other@example.com');
+define('CONTACT_TO', 'you@example.com');

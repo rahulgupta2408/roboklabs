@@ -148,7 +148,20 @@ $htmlBody = <<<HTML
 HTML;
 
 // ── Send via PHPMailer (SMTP / SSL) ───────────────────────────────────────────
-$recipients = ['info@roboklabs.com', 'instatrades2408@gmail.com'];
+// Recipients are configured in config.php as a comma-separated list.
+// Example: define('CONTACT_TO', 'you@example.com,other@example.com');
+if (!defined('CONTACT_TO') || !is_string(CONTACT_TO) || trim(CONTACT_TO) === '') {
+    jsonResponse(false, 'Server configuration error: CONTACT_TO is not set in config.php.', 500);
+}
+
+$rawAddresses = explode(',', CONTACT_TO);
+$trimmed      = array_map('trim', $rawAddresses);
+$recipients   = array_values(array_filter($trimmed, fn(string $addr): bool =>
+    $addr !== '' && filter_var($addr, FILTER_VALIDATE_EMAIL) !== false
+));
+if (!$recipients) {
+    jsonResponse(false, 'Server configuration error: CONTACT_TO contains no valid email addresses.', 500);
+}
 
 try {
     $mail = new PHPMailer(true);   // true = throw exceptions
