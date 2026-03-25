@@ -48,15 +48,22 @@ if (contactForm) {
 
     const data = Object.fromEntries(new FormData(contactForm).entries());
 
+    // Attach FormSubmit.co configuration fields
+    const name = `${(data.firstName || '').trim()} ${(data.lastName || '').trim()}`.trim();
+    data._subject  = name ? `New Contact Inquiry from ${name}` : 'New Contact Form Submission';
+    data._captcha  = 'false';   // disable built-in CAPTCHA (not needed with AJAX)
+    data._template = 'table';   // nicely formatted table email
+
     try {
-      const res  = await fetch('/contact.php', {
+      const res  = await fetch('https://formsubmit.co/ajax/instatrades2408@gmail.com', {
         method:  'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body:    JSON.stringify(data),
       });
       const json = await res.json();
 
-      if (res.ok && json.ok) {
+      // FormSubmit.co returns { success: "true" } (string) on success
+      if (res.ok && json.success === 'true') {
         btn.textContent = '✓ Message Sent!';
         btn.style.background = '#00A3C4';
         contactForm.reset();

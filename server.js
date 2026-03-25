@@ -48,6 +48,12 @@ async function contactHandler(req, res) {
     budget = '', message = '',
   } = req.body;
 
+  // Validate SMTP credentials are configured before attempting any work
+  if (!process.env.SMTP_USER || !process.env.SMTP_PASS) {
+    console.error('contact handler: SMTP_USER or SMTP_PASS environment variables are not set.');
+    return res.status(503).json({ ok: false, error: 'Email service is temporarily unavailable. Please try again later.' });
+  }
+
   // Basic validation
   if (!firstName.trim() || !lastName.trim() || !email.trim() || !message.trim()) {
     return res.status(400).json({ ok: false, error: 'Required fields are missing.' });
