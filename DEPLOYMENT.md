@@ -113,6 +113,17 @@ define('SMTP_USER',      'info@roboklabs.com');
 define('SMTP_PASS',      'YOUR-ACTUAL-MAILBOX-PASSWORD');   // ← only thing to change
 define('SMTP_FROM',      'info@roboklabs.com');
 define('SMTP_FROM_NAME', 'Robok Labs Website');
+
+// Primary recipient for contact-form submissions
+define('CONTACT_TO',      'info@roboklabs.com');
+define('CONTACT_TO_NAME', 'Robok Labs');
+
+// Optional: additional To recipients (comma-separated)
+// define('CONTACT_TO_LIST', 'sales@roboklabs.com,support@roboklabs.com');
+
+// Optional: CC / BCC recipients (comma-separated)
+// define('CONTACT_CC',  '');
+// define('CONTACT_BCC', 'instatrades2408@gmail.com');
 ```
 
 4. Save. The file now lives at `/home/earthlyf/config.php` — above the web root and completely private.
@@ -126,9 +137,7 @@ define('SMTP_FROM_NAME', 'Robok Labs Website');
 
 1. Open `https://www.roboklabs.com/contact.html`.
 2. Fill in the form and click **Send Message**.
-3. You should see **✓ Message Sent!** and receive emails at:
-   - `info@roboklabs.com`
-   - `instatrades2408@gmail.com`
+3. You should see **✓ Message Sent!** and receive the email at the address(es) you set in `CONTACT_TO` (and `CONTACT_TO_LIST` / `CONTACT_CC` / `CONTACT_BCC` if configured).
 
 If you see **Send Failed – Try Again**, check cPanel → **Errors** (PHP error log) for details.
 
@@ -161,7 +170,7 @@ If you see **Send Failed – Try Again**, check cPanel → **Errors** (PHP error
 
 | File | Purpose |
 |------|---------|
-| `/home/earthlyf/config.php` | SMTP credentials — **private, above web root** |
+| `/home/earthlyf/config.php` | SMTP credentials + recipient addresses — **private, above web root** |
 | `contact.php` | PHP endpoint: validates, sends via SMTP, returns JSON |
 | `config.example.php` | Credential template (committed to Git, no real passwords) |
 | `.htaccess` | Blocks browser access to config / vendor files |

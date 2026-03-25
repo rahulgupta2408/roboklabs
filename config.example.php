@@ -20,3 +20,22 @@ define('SMTP_FROM', 'info@roboklabs.com');
 
 // Display name shown alongside the From address
 define('SMTP_FROM_NAME', 'Robok Labs Website');
+
+// ── Contact-form recipient settings ──────────────────────────────────────────
+
+// Primary recipient for contact-form submissions (REQUIRED)
+define('CONTACT_TO',      'info@roboklabs.com');
+
+// Display name for the primary recipient (optional, can be empty string)
+define('CONTACT_TO_NAME', 'Robok Labs');
+
+// Additional To recipients – comma-separated list of email addresses (optional).
+// These are added alongside CONTACT_TO; they do not replace it.
+// Example: 'sales@roboklabs.com,support@roboklabs.com'
+// define('CONTACT_TO_LIST', '');
+
+// CC recipients – comma-separated list of email addresses (optional)
+// define('CONTACT_CC', '');
+
+// BCC recipients – comma-separated list of email addresses (optional)
+// define('CONTACT_BCC', '');

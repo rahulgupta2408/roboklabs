@@ -147,9 +147,29 @@ $htmlBody = <<<HTML
 </table>
 HTML;
 
-// ── Send via PHPMailer (SMTP / SSL) ───────────────────────────────────────────
-$recipients = ['info@roboklabs.com', 'instatrades2408@gmail.com'];
+// ── Resolve recipients from config ───────────────────────────────────────────
+// Primary recipient: CONTACT_TO must be defined in config.php.
+if (!defined('CONTACT_TO') || trim(CONTACT_TO) === '') {
+    error_log('contact.php config error: CONTACT_TO is not defined or empty.');
+    jsonResponse(false, 'Server configuration error: recipient not configured.', 500);
+}
 
+// Build the To list.
+// CONTACT_TO is always the primary recipient.
+// CONTACT_TO_LIST (optional, comma-separated) adds extra direct recipients.
+$toList = [CONTACT_TO];
+if (defined('CONTACT_TO_LIST') && trim(CONTACT_TO_LIST) !== '') {
+    foreach (explode(',', CONTACT_TO_LIST) as $addr) {
+        $addr = trim($addr);
+        if ($addr !== '' && !in_array($addr, $toList, true) && filter_var($addr, FILTER_VALIDATE_EMAIL)) {
+            $toList[] = $addr;
+        }
+    }
+}
+
+$toName = defined('CONTACT_TO_NAME') ? CONTACT_TO_NAME : '';
+
+// ── Send via PHPMailer (SMTP / SSL) ───────────────────────────────────────────
 try {
     $mail = new PHPMailer(true);   // true = throw exceptions
 
@@ -167,9 +187,32 @@ try {
     $mail->setFrom(SMTP_FROM, SMTP_FROM_NAME);
     $mail->addReplyTo($email, $firstName . ' ' . $lastName);
 
-    // Recipients
-    foreach ($recipients as $recipient) {
-        $mail->addAddress($recipient);
+    // Primary recipient (with display name)
+    $mail->addAddress(CONTACT_TO, $toName);
+
+    // Additional To recipients from CONTACT_TO_LIST (no display name)
+    foreach (array_slice($toList, 1) as $addr) {
+        $mail->addAddress($addr);
+    }
+
+    // Optional CC addresses (comma-separated list in config)
+    if (defined('CONTACT_CC') && trim(CONTACT_CC) !== '') {
+        foreach (explode(',', CONTACT_CC) as $addr) {
+            $addr = trim($addr);
+            if ($addr !== '' && filter_var($addr, FILTER_VALIDATE_EMAIL)) {
+                $mail->addCC($addr);
+            }
+        }
+    }
+
+    // Optional BCC addresses (comma-separated list in config)
+    if (defined('CONTACT_BCC') && trim(CONTACT_BCC) !== '') {
+        foreach (explode(',', CONTACT_BCC) as $addr) {
+            $addr = trim($addr);
+            if ($addr !== '' && filter_var($addr, FILTER_VALIDATE_EMAIL)) {
+                $mail->addBCC($addr);
+            }
+        }
     }
 
     // Content
