@@ -100,7 +100,7 @@ img { max-width: 100%; display: block; }
   letter-spacing: -0.5px;
 }
 .logo-accent { color: var(--accent); }
-.logo-img { height: 32px; width: auto; display: block; }
+.logo-img { height: 50px; width: auto; display: block; }
 
 /* Nav Links */
 .nav-links {
@@ -734,7 +734,7 @@ img { max-width: 100%; display: block; }
   margin-bottom: 14px;
 }
 .footer-logo span { color: var(--accent); }
-.footer-logo-img { height: 40px; width: auto; display: block; margin-bottom: 14px; }
+.footer-logo-img { height: 60px; width: auto; display: block; margin-bottom: 14px; }
 .footer-col > p { font-size: 0.88rem; line-height: 1.75; margin-bottom: 18px; }
 .footer-social { display: flex; gap: 12px; }
 .footer-social a {
