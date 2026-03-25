@@ -92,7 +92,7 @@ img { max-width: 100%; display: block; }
 }
 
 /* Logo */
-.logo { display: flex; align-items: center; }
+.logo { display: flex; align-items: center; gap: 10px; }
 .logo-text {
   font-size: 1.55rem;
   font-weight: 800;
