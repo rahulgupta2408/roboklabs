@@ -2,7 +2,7 @@
 
 This guide explains how to deploy the Robok Labs website with a working contact form on HostPapa cPanel shared hosting.
 
-Your site root on HostPapa is: **`/home/earthlyf/roboklabs.com/`**
+Your site root on HostPapa is: **`/home/earthyf/roboklabs.com/`**
 
 ---
 
@@ -17,7 +17,7 @@ Your site root on HostPapa is: **`/home/earthlyf/roboklabs.com/`**
 
 ## Step 1 – Upload website files
 
-Upload the repository contents into **`/home/earthlyf/roboklabs.com/`** (your domain's document root), **excluding**:
+Upload the repository contents into **`/home/earthyf/roboklabs.com/`** (your domain's document root), **excluding**:
 
 - `.git/`
 - `node_modules/`
@@ -88,7 +88,7 @@ A `vendor/` directory will appear inside `~/roboklabs.com/` containing PHPMailer
 ## Step 4 – Create `config.php` with your SMTP credentials (private, outside the web root)
 
 > **Why outside the web root?**  
-> Your web root is `/home/earthlyf/roboklabs.com/`. Any file inside it *could* theoretically be served over HTTP. Placing `config.php` one level up — at `/home/earthlyf/config.php` — makes it completely inaccessible from the internet, no matter what. Think of it like the keychain on your iPhone: it holds your credentials privately and nothing external can read it directly.
+> Your web root is `/home/earthyf/roboklabs.com/`. Any file inside it *could* theoretically be served over HTTP. Placing `config.php` one level up — at `/home/earthyf/config.php` — makes it completely inaccessible from the internet, no matter what. Think of it like the keychain on your iPhone: it holds your credentials privately and nothing external can read it directly.
 
 ### Create the private config file
 
@@ -101,7 +101,7 @@ nano ~/config.php          # or use any editor
 
 **Via cPanel File Manager:**
 
-1. Navigate to `/home/earthlyf/` (one level *above* `roboklabs.com/`).
+1. Navigate to `/home/earthyf/` (one level *above* `roboklabs.com/`).
 2. Click **+ File** → name it `config.php`.
 3. Right-click → **Edit** and paste the following:
 
@@ -117,7 +117,7 @@ define('CONTACT_TO',     'instatrades2408@gmail.com,info@roboklabs.com');
 define('CONTACT_TO_NAME','Robok Labs');
 ```
 
-4. Save. The file now lives at `/home/earthlyf/config.php` — above the web root and completely private.
+4. Save. The file now lives at `/home/earthyf/config.php` — above the web root and completely private.
 
 > ⚠️ **Never commit `config.php` to Git.** It is listed in `.gitignore`.  
 > ⚠️ The `.htaccess` in your web root also blocks HTTP access to any `config.php` that might accidentally end up there.
@@ -139,7 +139,7 @@ If you see **Send Failed – Try Again**, check cPanel → **Errors** (PHP error
 ## File layout on the server
 
 ```
-/home/earthlyf/
+/home/earthyf/
 │
 ├── config.php              ← YOUR PRIVATE CREDENTIALS (above web root, not in Git)
 │
@@ -155,7 +155,7 @@ If you see **Send Failed – Try Again**, check cPanel → **Errors** (PHP error
     └── style.css
 ```
 
-`contact.php` automatically looks for your config at `/home/earthlyf/config.php` first, then falls back to the same directory as itself if needed.
+`contact.php` automatically looks for your config at `/home/earthyf/config.php` first, then falls back to the same directory as itself if needed.
 
 ---
 
@@ -163,7 +163,7 @@ If you see **Send Failed – Try Again**, check cPanel → **Errors** (PHP error
 
 | File | Purpose |
 |------|---------|
-| `/home/earthlyf/config.php` | SMTP credentials — **private, above web root** |
+| `/home/earthyf/config.php` | SMTP credentials — **private, above web root** |
 | `contact.php` | PHP endpoint: validates, sends via SMTP, returns JSON |
 | `config.example.php` | Credential template (committed to Git, no real passwords) |
 | `.htaccess` | Blocks browser access to config / vendor files |
