@@ -148,7 +148,11 @@ $htmlBody = <<<HTML
 HTML;
 
 // ── Send via PHPMailer (SMTP / SSL) ───────────────────────────────────────────
-$recipients = ['info@roboklabs.com', 'instatrades2408@gmail.com'];
+// RECIPIENT_EMAIL is defined in config.php.  It may be a single address or a
+// comma-separated list of addresses (e.g. 'info@roboklabs.com,owner@example.com').
+// Fall back to SMTP_FROM when the constant is absent (legacy config files).
+$recipientRaw = defined('RECIPIENT_EMAIL') ? RECIPIENT_EMAIL : SMTP_FROM;
+$recipients   = array_filter(array_map('trim', explode(',', $recipientRaw)));
 
 try {
     $mail = new PHPMailer(true);   // true = throw exceptions

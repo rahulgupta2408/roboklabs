@@ -20,3 +20,9 @@ define('SMTP_FROM', 'info@roboklabs.com');
 
 // Display name shown alongside the From address
 define('SMTP_FROM_NAME', 'Robok Labs Website');
+
+// Email address(es) that receive contact form submissions.
+// To deliver to one inbox: use a single string, e.g. 'info@roboklabs.com'
+// To deliver to multiple inboxes: use a comma-separated string,
+//   e.g. 'info@roboklabs.com,owner@example.com'
+define('RECIPIENT_EMAIL', 'info@roboklabs.com');
