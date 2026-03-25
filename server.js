@@ -37,8 +37,11 @@ function createTransport() {
   });
 }
 
-// ── POST /api/contact ────────────────────────────────────────────────────────
-app.post('/api/contact', async (req, res) => {
+// ── Contact form handler ─────────────────────────────────────────────────────
+// Registered on both /api/contact (canonical) and /contact.php (PHP-compatible
+// URL used by script.js so the same client code works on both Node.js and
+// PHP/Apache deployments).
+async function contactHandler(req, res) {
   const {
     firstName = '', lastName = '', email = '',
     phone = '', company = '', service = '',
@@ -92,7 +95,14 @@ app.post('/api/contact', async (req, res) => {
     console.error('Failed to send contact email:', err);
     return res.status(500).json({ ok: false, error: 'Failed to send message. Please try again later.' });
   }
-});
+}
+
+// Register the handler on both routes.
+// /api/contact  – canonical REST endpoint
+// /contact.php  – URL used by script.js so the same client works on Node.js
+//                 and PHP/Apache deployments without any changes to the front-end
+app.post('/api/contact', contactHandler);
+app.post('/contact.php',  contactHandler);
 
 // ── Start server ─────────────────────────────────────────────────────────────
 if (require.main === module) {
