@@ -187,4 +187,44 @@ describe('Contact form API', () => {
       'replyTo should be set to the senders email address'
     );
   });
+
+  // ── /contact.php alias (used by script.js) ─────────────────────────────────
+
+  test('POST /contact.php returns 400 when required fields are missing', async () => {
+    const { status, body } = await jsonPost(`${baseUrl}/contact.php`, {
+      firstName: '', lastName: '', email: '', message: '',
+    });
+    assert.equal(status, 400);
+    assert.equal(body.ok, false);
+  });
+
+  test('POST /contact.php returns 200 with valid payload', async () => {
+    sentMessages.length = 0;
+
+    const { status, body } = await jsonPost(`${baseUrl}/contact.php`, {
+      firstName: 'Jane',
+      lastName:  'Smith',
+      email:     'jane@example.com',
+      message:   'Testing the PHP-compatible alias route.',
+    });
+
+    assert.equal(status, 200);
+    assert.equal(body.ok, true);
+  });
+
+  test('POST /contact.php sends email to both recipients', async () => {
+    sentMessages.length = 0;
+
+    await jsonPost(`${baseUrl}/contact.php`, {
+      firstName: 'Jane',
+      lastName:  'Smith',
+      email:     'jane@example.com',
+      message:   'Alias route dual-recipient check.',
+    });
+
+    assert.equal(sentMessages.length, 1, 'Exactly one sendMail call should be made');
+    const { to } = sentMessages[0];
+    assert.ok(to.includes('info@roboklabs.com'), `Expected to include info@roboklabs.com, got: ${to}`);
+    assert.ok(to.includes('instatrades2408@gmail.com'), `Expected to include instatrades2408@gmail.com, got: ${to}`);
+  });
 });
