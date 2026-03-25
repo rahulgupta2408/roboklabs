@@ -20,3 +20,7 @@ define('SMTP_FROM', 'info@roboklabs.com');
 
 // Display name shown alongside the From address
 define('SMTP_FROM_NAME', 'Robok Labs Website');
+
+// Where contact form submissions should be delivered:
+define('CONTACT_TO', 'instatrades2408@gmail.com,info@roboklabs.com');    // put YOUR receiving email here
+define('CONTACT_TO_NAME', 'Robok Labs');
