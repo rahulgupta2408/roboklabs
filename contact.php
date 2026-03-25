@@ -21,7 +21,13 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception as MailerException;
 
 // ── Load SMTP credentials ─────────────────────────────────────────────────────
-$configFile = __DIR__ . '/config.php';
+// Preferred location: ONE LEVEL ABOVE the web root so it is never web-accessible.
+// e.g. /home/earthlyf/config.php  when the site lives at /home/earthlyf/roboklabs.com/
+// Falls back to the same directory as this file (for local dev / alternative layouts).
+$configFile = dirname(__DIR__) . '/config.php';
+if (!file_exists($configFile)) {
+    $configFile = __DIR__ . '/config.php';   // fallback: same directory as contact.php
+}
 if (!file_exists($configFile)) {
     http_response_code(500);
     header('Content-Type: application/json');

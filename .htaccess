@@ -1,0 +1,21 @@
+# ===== ROBOK LABS – Apache configuration =====
+
+# ── Block direct HTTP access to PHP config / credential files ────────────────
+# config.php should live OUTSIDE the web root (see DEPLOYMENT.md).
+# This rule is a safety net in case a copy lands here accidentally.
+<Files "config.php">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Block access to composer files and the vendor directory from the browser.
+<FilesMatch "^(composer\.(json|lock)|\.env|\.gitignore)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # Block vendor directory
+    RewriteRule ^vendor/ - [F,L]
+</IfModule>
