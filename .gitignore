@@ -1,9 +1,2 @@
-node_modules/
-.env
+# Contact form backup log (contains visitor emails) - never commit
 *.log
-
-# PHP – real config file with SMTP secrets (use config.example.php as a template)
-config.php
-
-# Composer vendor directory
-vendor/

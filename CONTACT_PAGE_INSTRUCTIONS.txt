@@ -1,0 +1,115 @@
+================================================================
+ ROBOK LABS – Contact Page Deployment
+================================================================
+
+WHAT'S IN THIS ZIP
+------------------
+  contact/
+      index.html                 - The contact page (form + info + map)
+      send.php                   - Processes the form; sends email to
+                                   info@roboklabs.com
+  sitemap.xml                    - Updated to include /contact
+
+================================================================
+ STEP 1 – Upload
+================================================================
+  1. cPanel -> File Manager -> go to your site root:
+          /home/earthlyf/roboklabs.com/
+  2. Click Upload -> upload  contact_page.zip
+  3. Right-click the zip -> Extract -> extract into the
+     site root (/home/earthlyf/roboklabs.com).
+     You should now see a new folder  contact/  sitting
+     next to  about/, services/, etc., plus a refreshed
+     sitemap.xml.
+  4. Delete the zip file itself after extraction.
+
+================================================================
+ STEP 2 – Set permissions
+================================================================
+  1. Open the  /contact  folder in File Manager.
+  2. Right-click  index.html  -> Change Permissions -> 0644
+  3. Right-click  send.php    -> Change Permissions -> 0644
+  4. Right-click the  /contact folder itself -> Change
+     Permissions -> 0755
+
+================================================================
+ STEP 3 – Test it
+================================================================
+  Visit in incognito:   https://roboklabs.com/contact
+
+  You should see:
+   * The topbar + nav bar + hero headline "Let's Build Something"
+   * A two-column layout with contact info on the left
+     and the message form on the right
+   * A Google Map iframe below showing 5000 Yonge Street
+   * The same footer as the rest of the site
+
+  Fill the form with a real email address you can check,
+  and click "Send Message". You should:
+   1. Land on  /contact?sent=1   with a green success banner
+   2. Within 1-2 minutes, receive an email at
+        info@roboklabs.com
+      with the subject:
+        "[Robok Labs Contact] <subject the user typed>"
+      and a body containing all the form fields.
+
+================================================================
+ STEP 4 – If mail doesn't arrive
+================================================================
+  A)  Check your spam/junk folder in the info@roboklabs.com
+      mailbox.
+  B)  A backup log is written to:
+          /home/earthlyf/roboklabs.com/contact/contact_submissions.log
+      Every submission is recorded there with timestamp and
+      "sent=1" or "sent=0" — open it to confirm the submission
+      was received by the server.
+  C)  If  sent=0  appears in the log, PHP's mail() function
+      failed on the server. Fix by asking your host to:
+      "Please confirm the PHP mail() function is enabled on
+       my cPanel account, and that info@roboklabs.com is
+       configured as a valid mailbox under my account."
+
+      Alternative: install a PHP SMTP library (PHPMailer)
+      and configure it to use your cPanel webmail credentials.
+      Let me know and I can generate that version too.
+
+================================================================
+ STEP 5 – Optional hardening (recommended)
+================================================================
+  A)  Add an SPF record for roboklabs.com if you don't have one
+      already — prevents the email from going to spam. In cPanel:
+          Email -> Email Deliverability -> Manage (for
+          roboklabs.com) -> install/repair suggested records.
+  B)  If you want Google reCAPTCHA on the form, let me know
+      and I'll add it. The current form already has:
+          - Honeypot field (hidden input bots auto-fill)
+          - Time-check (rejects submits faster than 2s)
+      Good enough for most traffic; reCAPTCHA only needed if
+      you start getting spam.
+
+================================================================
+ STEP 6 – Update Google Search Console
+================================================================
+  Submit the new page to Google:
+     Search Console -> URL Inspection ->
+        paste  https://roboklabs.com/contact  -> Request Indexing
+
+================================================================
+ FEATURES INCLUDED
+================================================================
+  * Mobile-responsive (same breakpoints as rest of site)
+  * Matches site design (same colors, fonts, topbar, nav, footer)
+  * SEO meta tags + JSON-LD LocalBusiness schema with geo
+    coordinates (helps Google show your location in Maps)
+  * Success/error banner after submit
+  * Anti-spam: honeypot + timestamp check
+  * Email from info@roboklabs.com preserves sender name so
+    you can just hit "Reply" in the email to respond to the
+    lead directly
+  * Local backup log of every submission (audit trail)
+  * tel:  and  mailto:  links for one-tap call/email on mobile
+  * Embedded Google Map (no API key required)
+
+================================================================
+ END
+================================================================

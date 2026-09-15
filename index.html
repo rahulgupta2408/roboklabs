@@ -1,348 +1,1131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Robok Labs – Product Development and Manufacturing House</title>
-  <meta name="description" content="Robok Labs is a Toronto-based product development and manufacturing company specializing in electronics hardware design, firmware, software, PCB assembly, and more."/>
-  <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-  <link rel="icon" type="image/png" href="favicon.png"/>
-  <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
-  <meta property="og:image" content="https://roboblabs.com/logo.png"/>
+  <title>Robok Labs | Electronics Product Design & Manufacturing | Toronto, Canada</title>
+  <meta name="description" content="Robok Labs is a Toronto-based electronics product design and manufacturing house. End-to-end hardware, firmware, PCB assembly, box build, industrial automation & digital twin services."/>
+  <!-- ===== SEO META (added) ===== -->
+  <meta name="keywords" content="electronics design Toronto, PCB design Canada, contract manufacturing, embedded systems, industrial automation, digital twin, PCB assembly, firmware development, box build, FPGA design, Robok Labs"/>
+  <meta name="author" content="Robok Labs"/>
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
+  <meta name="googlebot" content="index, follow"/>
+  <meta name="bingbot" content="index, follow"/>
+  <meta name="language" content="en-CA"/>
+  <meta name="geo.region" content="CA-ON"/>
+  <meta name="geo.placename" content="Toronto"/>
+  <meta name="theme-color" content="#0A0F1A"/>
+  <link rel="canonical" href="https://roboklabs.com/"/>
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="Robok Labs"/>
   <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://roboklabs.com/"/>
+  <meta property="og:title" content="Robok Labs | Electronics Product Design & Manufacturing | Toronto, Canada"/>
+  <meta property="og:description" content="Robok Labs is a Toronto-based electronics product design and manufacturing house. End-to-end hardware, firmware, PCB assembly, box build, industrial automation & digital twin services."/>
+  <meta property="og:image" content="https://roboklabs.com/wp-content/uploads/2024/01/roboklabs-og.jpg"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:locale" content="en_CA"/>
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@roboklabs"/>
+  <meta name="twitter:creator" content="@roboklabs"/>
+  <meta name="twitter:title" content="Robok Labs | Electronics Product Design & Manufacturing | Toronto, Canada"/>
+  <meta name="twitter:description" content="Robok Labs is a Toronto-based electronics product design and manufacturing house. End-to-end hardware, firmware, PCB assembly, box build, industrial automation & digital twin services."/>
+  <meta name="twitter:image" content="https://roboklabs.com/wp-content/uploads/2024/01/roboklabs-og.jpg"/>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://roboklabs.com/#organization",
+  "name": "Robok Labs",
+  "alternateName": "Robok Labs Inc.",
+  "url": "https://roboklabs.com/",
+  "logo": "https://roboklabs.com/wp-content/uploads/2024/01/roboklabs-logo.png",
+  "image": "https://roboklabs.com/wp-content/uploads/2024/01/roboklabs-og.jpg",
+  "description": "Robok Labs is a Toronto-based electronics product design and manufacturing house specializing in industrial automation, digital twins, embedded systems, PCB assembly, and box build manufacturing.",
+  "foundingDate": "2018",
+  "email": "info@roboklabs.com",
+  "telephone": "+1-437-962-1288",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Toronto",
+    "addressRegion": "ON",
+    "addressCountry": "CA"
+  },
+  "areaServed": ["CA","US","Global"],
+  "knowsAbout": [
+    "Electronics Product Design",
+    "PCB Design",
+    "PCB Assembly",
+    "Box Build Manufacturing",
+    "Firmware Development",
+    "Embedded Systems",
+    "Industrial Automation",
+    "Digital Twin",
+    "FPGA Design",
+    "Mechanical Enclosure Design",
+    "Contract Manufacturing"
+  ],
+  "sameAs": [
+    "https://linkedin.com/company/roboklabs",
+    "https://twitter.com/roboklabs"
+  ],
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "telephone": "+1-437-962-1288",
+    "email": "info@roboklabs.com",
+    "contactType": "sales",
+    "areaServed": ["CA","US"],
+    "availableLanguage": ["English"]
+  }]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://roboklabs.com/#website",
+  "url": "https://roboklabs.com/",
+  "name": "Robok Labs",
+  "description": "Electronics product design and manufacturing house based in Toronto, Canada.",
+  "publisher": { "@id": "https://roboklabs.com/#organization" },
+  "inLanguage": "en-CA"
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://roboklabs.com/#localbusiness",
+  "name": "Robok Labs",
+  "image": "https://roboklabs.com/wp-content/uploads/2024/01/roboklabs-og.jpg",
+  "url": "https://roboklabs.com/",
+  "telephone": "+1-437-962-1288",
+  "email": "info@roboklabs.com",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Toronto",
+    "addressRegion": "ON",
+    "addressCountry": "CA"
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "09:00",
+    "closes": "18:00"
+  }]
+}
+</script>
+  <!-- ===== /SEO META ===== -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:        #0A0F1A;
+      --ink2:       #111827;
+      --steel:      #1C2B40;
+      --steel2:     #253448;
+      --accent:     #00C8A0;
+      --accent2:    #00A882;
+      --amber:      #F59E0B;
+      --muted:      #6B8399;
+      --muted2:     #8BA4BC;
+      --light:      #F0F4F8;
+      --light2:     #E4EBF3;
+      --white:      #FFFFFF;
+      --border:     rgba(255,255,255,0.07);
+      --border-lt:  #D4DDE8;
+      --radius:     6px;
+      --radius-lg:  12px;
+      --trans:      0.22s ease;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 28px; }
+
+    /* ── TOPBAR ── */
+    .topbar {
+      background: var(--ink);
+      border-bottom: 1px solid var(--border);
+      padding: 6px 0;
+      font-size: 0.78rem;
+      color: var(--muted2);
+      letter-spacing: 0.3px;
+    }
+    .topbar-inner { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px; }
+    .topbar a { color: var(--accent); transition: color var(--trans); }
+    .topbar a:hover { color: #fff; }
+    .topbar-badge {
+      background: var(--accent);
+      color: var(--ink);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 2px 8px;
+      border-radius: 2px;
+    }
+
+    /* ── NAVBAR ── */
+    .navbar {
+      position: sticky; top: 0; z-index: 1000;
+      background: var(--ink2);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner { display:flex; align-items:center; justify-content:space-between; height:62px; }
+    .logo { display:flex; align-items:center; gap:10px; }
+    .logo-mark {
+      width: 34px; height: 34px;
+      background: var(--accent);
+      border-radius: 4px;
+      display: flex; align-items:center; justify-content:center;
+    }
+    .logo-mark svg { width:20px; height:20px; }
+    .logo-text { font-family:'Rajdhani',sans-serif; font-size:1.45rem; font-weight:700; color:#fff; letter-spacing:1px; }
+    .logo-text span { color: var(--accent); }
+    .nav-brand { font-family:'Rajdhani',sans-serif; font-size:1.35rem; font-weight:700; color:#fff; letter-spacing:1px; line-height:1; }
+    .nav-brand span { color: var(--accent); }
+
+    .nav-links { list-style:none; display:flex; align-items:center; gap:2px; }
+    .nav-links > li { position:relative; }
+    .nav-links > li > a {
+      color: #9BBCD6; font-size:0.88rem; font-weight:500;
+      padding: 8px 14px; border-radius: var(--radius); display:block;
+      transition: background var(--trans), color var(--trans); white-space:nowrap;
+    }
+    .nav-links > li > a:hover,
+    .nav-links > li:hover > a { background: var(--steel); color:#fff; }
+
+    .dropdown-menu {
+      position:absolute; top:calc(100% + 2px); left:0;
+      background: var(--ink2);
+      border: 1px solid rgba(0,200,160,0.15);
+      border-radius: var(--radius-lg); min-width:220px;
+      list-style:none; padding:8px 0;
+      opacity:0; visibility:hidden; transform:translateY(-6px);
+      transition: opacity var(--trans), transform var(--trans), visibility var(--trans);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.5); z-index:999;
+    }
+    .dropdown:hover .dropdown-menu { opacity:1; visibility:visible; transform:translateY(0); }
+    .dropdown-menu li a {
+      display:block; padding:9px 20px; font-size:0.85rem; color:#8BADC8;
+      transition: background var(--trans), color var(--trans);
+    }
+    .dropdown-menu li a:hover { background: var(--steel); color:#fff; }
+
+    .btn-nav {
+      background: var(--accent) !important; color: var(--ink) !important;
+      font-weight:700 !important; border-radius: var(--radius) !important;
+      padding: 8px 20px !important; font-size:0.85rem !important;
+      transition: background var(--trans) !important;
+    }
+    .btn-nav:hover { background: var(--accent2) !important; color:var(--ink) !important; }
+
+    .nav-toggle {
+      display:none; background:none; border:none; color:#fff; font-size:1.5rem; cursor:pointer;
+    }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display:inline-flex; align-items:center; gap:8px;
+      padding:13px 30px; border-radius: var(--radius);
+      font-weight:600; font-size:0.92rem; cursor:pointer; border:none;
+      transition: all var(--trans);
+    }
+    .btn-primary { background: var(--accent); color: var(--ink); }
+    .btn-primary:hover { background: var(--accent2); transform:translateY(-2px); }
+    .btn-outline { background:transparent; color:#fff; border:1.5px solid rgba(255,255,255,0.25); }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+    .btn-dark { background: var(--steel); color: #fff; }
+    .btn-dark:hover { background: var(--steel2); transform:translateY(-1px); }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--ink);
+      position: relative; overflow:hidden;
+      padding: 110px 0 80px;
+      min-height: 620px;
+      display: flex; align-items:center;
+    }
+    .hero-grid-bg {
+      position:absolute; inset:0;
+      background-image:
+        linear-gradient(rgba(0,200,160,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,200,160,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .hero-glow {
+      position:absolute; top:-120px; right:-80px;
+      width: 600px; height:600px;
+      background: radial-gradient(circle, rgba(0,200,160,0.10) 0%, transparent 65%);
+      pointer-events:none;
+    }
+    .hero-glow2 {
+      position:absolute; bottom:-100px; left:10%;
+      width: 400px; height:400px;
+      background: radial-gradient(circle, rgba(0,100,200,0.07) 0%, transparent 65%);
+      pointer-events:none;
+    }
+
+    .hero-inner { position:relative; z-index:2; display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; }
+    .hero-eyebrow {
+      display:inline-flex; align-items:center; gap:8px;
+      background: rgba(0,200,160,0.1); border:1px solid rgba(0,200,160,0.25);
+      color: var(--accent); font-size:0.75rem; font-weight:700; letter-spacing:2px;
+      padding: 6px 14px; border-radius:20px; margin-bottom:24px;
+    }
+    .hero-eyebrow::before { content:''; width:6px; height:6px; background:var(--accent); border-radius:50%; }
+    .hero h1 {
+      font-family:'Rajdhani',sans-serif;
+      font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+      font-weight:700; color:#fff; line-height:1.1;
+      margin-bottom: 22px; letter-spacing:0.5px;
+    }
+    .hero h1 em { font-style:normal; color:var(--accent); }
+    .hero-desc { color: var(--muted2); font-size:1.05rem; line-height:1.75; margin-bottom:36px; max-width:480px; }
+    .hero-actions { display:flex; gap:14px; flex-wrap:wrap; }
+
+    .hero-stats {
+      display:grid; grid-template-columns:1fr 1fr; gap:1px;
+      background: var(--border); border:1px solid var(--border);
+      border-radius: var(--radius-lg); overflow:hidden; margin-top:40px;
+    }
+    .hero-stat {
+      background: rgba(255,255,255,0.03);
+      padding: 20px 24px;
+      transition: background var(--trans);
+    }
+    .hero-stat:hover { background: rgba(255,255,255,0.06); }
+    .stat-num { font-family:'Rajdhani',sans-serif; font-size:1.9rem; font-weight:700; color:#fff; }
+    .stat-num span { color:var(--accent); }
+    .stat-label { font-size:0.8rem; color:var(--muted); margin-top:2px; }
+
+    /* Hero visual panel */
+    .hero-visual { position:relative; }
+    .hero-circuit {
+      background: var(--steel);
+      border: 1px solid rgba(0,200,160,0.15);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      position:relative; overflow:hidden;
+    }
+    .circuit-label {
+      font-size:0.72rem; font-weight:700; letter-spacing:2px;
+      color:var(--accent); margin-bottom:16px;
+    }
+    .twin-modules { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    .twin-mod {
+      background: rgba(0,0,0,0.3);
+      border: 1px solid rgba(0,200,160,0.12);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+    .twin-mod-title { font-size:0.78rem; font-weight:600; color:#fff; margin-bottom:6px; }
+    .twin-mod-val {
+      font-family:'Rajdhani',sans-serif; font-size:1.4rem; font-weight:700;
+      color:var(--accent);
+    }
+    .twin-mod-sub { font-size:0.7rem; color:var(--muted); margin-top:2px; }
+    .pulse-bar {
+      height:3px; background:linear-gradient(90deg,var(--accent) 0%,transparent 100%);
+      border-radius:2px; margin-top:10px; width:70%; animation: pulse-w 3s ease-in-out infinite;
+    }
+    .pulse-bar.delay { animation-delay:1.5s; }
+    @keyframes pulse-w { 0%,100%{width:50%} 50%{width:90%} }
+    .twin-status {
+      display:flex; align-items:center; gap:8px;
+      margin-top:16px; padding-top:14px; border-top:1px solid var(--border);
+      font-size:0.78rem; color:var(--muted2);
+    }
+    .status-dot { width:7px; height:7px; background:var(--accent); border-radius:50%; animation:blink 2s ease-in-out infinite; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+    /* ── LOGO BAR ── */
+    .logobar {
+      background: var(--light);
+      border-top:1px solid var(--border-lt); border-bottom:1px solid var(--border-lt);
+      padding: 20px 0;
+    }
+    .logobar-inner { display:flex; align-items:center; justify-content:center; gap:40px; flex-wrap:wrap; }
+    .logobar-label { font-size:0.75rem; font-weight:600; color:var(--muted); letter-spacing:1px; white-space:nowrap; }
+    .logobar-item {
+      font-size:0.82rem; font-weight:700; color:#9BAAB8; letter-spacing:0.5px;
+      padding:6px 16px; border:1px solid var(--border-lt); border-radius:4px;
+      transition: border-color var(--trans), color var(--trans);
+    }
+    .logobar-item:hover { border-color: var(--accent); color:var(--ink); }
+
+    /* ── SECTION UTILS ── */
+    .section-pad { padding:90px 0; }
+    .section-pad-sm { padding:60px 0; }
+    .section-eyebrow {
+      font-size:0.72rem; font-weight:700; letter-spacing:2.5px;
+      color:var(--accent); margin-bottom:12px;
+    }
+    .section-title {
+      font-family:'Rajdhani',sans-serif; font-size:2.1rem; font-weight:700; letter-spacing:0.5px;
+      color:var(--ink); line-height:1.2; margin-bottom:14px;
+    }
+    .section-title.white { color:#fff; }
+    .section-sub {
+      color:var(--muted); font-size:1rem; max-width:580px; line-height:1.8; margin-bottom:52px;
+    }
+    .section-sub.white { color:var(--muted2); }
+    .section-sub.centered { margin-left:auto; margin-right:auto; text-align:center; }
+    .text-center { text-align:center; }
+    .bg-light { background: var(--light); }
+    .bg-dark { background: var(--ink2); }
+    .bg-ink { background: var(--ink); }
+    .divider { width:40px; height:3px; background:var(--accent); border-radius:2px; margin-bottom:28px; }
+    .divider.centered { margin-left:auto; margin-right:auto; }
+
+    /* ── WHAT WE DO ── */
+    .what-grid { display:grid; grid-template-columns:1fr 1.1fr; gap:80px; align-items:center; }
+    .what-text p { color:var(--muted); line-height:1.85; margin-bottom:16px; font-size:0.97rem; }
+    .what-image {
+      background: var(--ink);
+      border: 1px solid rgba(0,200,160,0.1);
+      border-radius: var(--radius-lg);
+      padding: 32px; position:relative; overflow:hidden;
+    }
+    .lifecycle-steps { display:flex; flex-direction:column; gap:0; }
+    .lifecycle-step {
+      display:flex; align-items:flex-start; gap:16px;
+      padding: 16px 0;
+      border-bottom:1px solid rgba(255,255,255,0.05);
+    }
+    .lifecycle-step:last-child { border-bottom:none; }
+    .step-num {
+      font-family:'Rajdhani',sans-serif; font-size:0.75rem; font-weight:700;
+      color:var(--accent); width:28px; flex-shrink:0; padding-top:3px;
+    }
+    .step-body h4 { font-size:0.9rem; font-weight:600; color:#fff; margin-bottom:3px; }
+    .step-body p { font-size:0.82rem; color:var(--muted); line-height:1.6; }
+
+    /* ── SERVICES ── */
+    .services-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+    .service-card {
+      background:#fff; border:1px solid var(--border-lt);
+      border-radius: var(--radius-lg); padding:32px 28px;
+      position:relative; overflow:hidden;
+      transition: border-color var(--trans), box-shadow var(--trans), transform var(--trans);
+    }
+    .service-card::before {
+      content:''; position:absolute; top:0; left:0; right:0; height:3px;
+      background: var(--accent); transform:scaleX(0); transform-origin:left;
+      transition: transform var(--trans);
+    }
+    .service-card:hover { border-color:rgba(0,200,160,0.4); box-shadow:0 8px 30px rgba(0,200,160,0.08); transform:translateY(-4px); }
+    .service-card:hover::before { transform:scaleX(1); }
+    .service-icon {
+      width:46px; height:46px; border-radius:10px;
+      background: rgba(0,200,160,0.1); border:1px solid rgba(0,200,160,0.2);
+      display:flex; align-items:center; justify-content:center;
+      margin-bottom:20px; font-size:1.2rem;
+    }
+    .service-card h3 { font-family:'Rajdhani',sans-serif; font-size:1.05rem; font-weight:700; color:var(--ink); margin-bottom:10px; }
+    .service-card p { font-size:0.88rem; color:var(--muted); line-height:1.75; margin-bottom:18px; }
+    .service-link { font-size:0.85rem; font-weight:600; color:var(--accent2); display:inline-flex; align-items:center; gap:4px; }
+    .service-link::after { content:'→'; transition: transform var(--trans); }
+    .service-card:hover .service-link::after { transform:translateX(4px); }
+
+    /* ── DIGITAL TWIN FEATURE ── */
+    .twin-section {
+      background: var(--ink);
+      position:relative; overflow:hidden; padding:90px 0;
+    }
+    .twin-section-glow {
+      position:absolute; top:0; right:0; bottom:0;
+      width:50%;
+      background: radial-gradient(ellipse at right center, rgba(0,200,160,0.07) 0%, transparent 65%);
+    }
+    .twin-feature-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; position:relative; z-index:2; }
+    .twin-feature-badge {
+      display:inline-flex; align-items:center; gap:6px;
+      background: rgba(0,200,160,0.1); border:1px solid rgba(0,200,160,0.25);
+      color:var(--accent); font-size:0.72rem; font-weight:700; letter-spacing:1.5px;
+      padding:5px 12px; border-radius:20px; margin-bottom:18px;
+    }
+    .twin-feature-grid h2 {
+      font-family:'Rajdhani',sans-serif; font-size:2.2rem; font-weight:700; color:#fff; line-height:1.15; margin-bottom:18px;
+    }
+    .twin-feature-grid p { color:var(--muted2); font-size:0.97rem; line-height:1.8; margin-bottom:14px; }
+    .twin-bullets { list-style:none; margin:20px 0 32px; display:flex; flex-direction:column; gap:10px; }
+    .twin-bullets li {
+      display:flex; align-items:flex-start; gap:10px;
+      font-size:0.9rem; color:var(--muted2); line-height:1.6;
+    }
+    .twin-bullets li::before {
+      content:''; flex-shrink:0; width:16px; height:16px;
+      background: rgba(0,200,160,0.15); border:1px solid rgba(0,200,160,0.3);
+      border-radius:4px; margin-top:3px;
+      background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4L3.5 6.5L9 1' stroke='%2300C8A0' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat:no-repeat; background-position:center;
+    }
+
+    /* twin dashboard mock */
+    .twin-dashboard {
+      background: var(--steel);
+      border: 1px solid rgba(0,200,160,0.15);
+      border-radius: var(--radius-lg);
+      padding: 24px; font-size:0.82rem;
+    }
+    .dash-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:18px; }
+    .dash-title { font-weight:600; color:#fff; font-size:0.85rem; }
+    .dash-live { display:flex; align-items:center; gap:6px; font-size:0.72rem; color:var(--accent); font-weight:600; }
+    .dash-dot { width:6px; height:6px; background:var(--accent); border-radius:50%; animation:blink 2s infinite; }
+    .dash-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-bottom:16px; }
+    .dash-metric { background:rgba(0,0,0,0.25); border-radius: var(--radius); padding:12px; }
+    .dash-metric-val { font-family:'Rajdhani',sans-serif; font-size:1.25rem; font-weight:700; color:#fff; }
+    .dash-metric-val.green { color: var(--accent); }
+    .dash-metric-val.amber { color: var(--amber); }
+    .dash-metric-label { font-size:0.68rem; color:var(--muted); margin-top:2px; }
+    .dash-bars { display:flex; flex-direction:column; gap:8px; }
+    .dash-bar-row { display:flex; align-items:center; gap:10px; }
+    .dash-bar-label { font-size:0.72rem; color:var(--muted2); width:80px; flex-shrink:0; }
+    .dash-bar-track { flex:1; height:6px; background:rgba(255,255,255,0.07); border-radius:3px; overflow:hidden; }
+    .dash-bar-fill { height:100%; border-radius:3px; background:var(--accent); }
+    .dash-bar-val { font-size:0.72rem; color:var(--muted); width:30px; text-align:right; flex-shrink:0; }
+
+    /* ── INDUSTRIES ── */
+    .industries-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+    .industry-card {
+      background:#fff; border:1px solid var(--border-lt); border-radius: var(--radius-lg);
+      padding:24px 20px; text-align:center;
+      transition: border-color var(--trans), box-shadow var(--trans), transform var(--trans);
+    }
+    .industry-card:hover { border-color:rgba(0,200,160,0.4); transform:translateY(-4px); box-shadow:0 8px 24px rgba(0,200,160,0.07); }
+    .industry-icon { font-size:1.8rem; margin-bottom:10px; }
+    .industry-card p { font-size:0.83rem; color:var(--muted); font-weight:500; }
+    .industry-card.featured { border-color:rgba(0,200,160,0.3); background: rgba(0,200,160,0.03); }
+    .industry-card.featured p { color:var(--ink); }
+
+    /* ── PORTFOLIO ── */
+    .portfolio-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+    .port-card {
+      background: var(--ink2); border:1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius-lg); overflow:hidden;
+      transition: border-color var(--trans), transform var(--trans);
+    }
+    .port-card:hover { border-color:rgba(0,200,160,0.25); transform:translateY(-5px); }
+    .port-thumb {
+      height:170px;
+      display:flex; align-items:center; justify-content:center;
+      position:relative; overflow:hidden;
+    }
+    .port-thumb-1 { background: linear-gradient(135deg,#081520,#1a3050); }
+    .port-thumb-2 { background: linear-gradient(135deg,#0c1f10,#1a3820); }
+    .port-thumb-3 { background: linear-gradient(135deg,#1a1008,#2d2010); }
+    .port-thumb svg { opacity:0.4; }
+    .port-tag {
+      position:absolute; top:12px; left:12px;
+      background: rgba(0,200,160,0.15); border:1px solid rgba(0,200,160,0.3);
+      color:var(--accent); font-size:0.65rem; font-weight:700; letter-spacing:1px;
+      padding:3px 10px; border-radius:3px;
+    }
+    .port-body { padding:20px 22px; }
+    .port-body h4 { font-family:'Rajdhani',sans-serif; font-size:0.97rem; font-weight:700; color:#fff; margin-bottom:7px; }
+    .port-body p { font-size:0.83rem; color:var(--muted); line-height:1.65; }
+
+    /* ── WHY ROBOK ── */
+    .why-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; }
+    .why-card {
+      background: var(--steel); border:1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius-lg); padding:28px;
+      transition: border-color var(--trans);
+    }
+    .why-card:hover { border-color:rgba(0,200,160,0.2); }
+    .why-icon { font-size:1.5rem; margin-bottom:14px; }
+    .why-card h3 { font-family:'Rajdhani',sans-serif; font-size:1rem; font-weight:700; color:#fff; margin-bottom:8px; }
+    .why-card p { font-size:0.86rem; color:var(--muted2); line-height:1.7; }
+
+    /* ── CTA ── */
+    .cta-section { background: var(--ink); padding:90px 0; text-align:center; position:relative; overflow:hidden; }
+    .cta-glow { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:500px; height:300px; background:radial-gradient(ellipse,rgba(0,200,160,0.1) 0%,transparent 65%); pointer-events:none; }
+    .cta-section h2 { font-family:'Rajdhani',sans-serif; font-size:2.4rem; font-weight:700; color:#fff; margin-bottom:16px; position:relative; z-index:2; }
+    .cta-section p { color:var(--muted2); font-size:1.02rem; margin-bottom:36px; position:relative; z-index:2; }
+    .cta-actions { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; position:relative; z-index:2; }
+
+    /* ── FOOTER ── */
+    .footer { background: var(--ink2); border-top:1px solid var(--border); padding-top:60px; }
+    .footer-grid { display:grid; grid-template-columns:1.6fr 1fr 1.3fr 1.2fr; gap:40px; padding-bottom:50px; border-bottom:1px solid var(--border); }
+    .footer-logo { font-family:'Rajdhani',sans-serif; font-size:1.3rem; font-weight:700; color:#fff; margin-bottom:12px; }
+    .footer-logo span { color:var(--accent); }
+    .footer-col > p { font-size:0.86rem; color:var(--muted); line-height:1.75; margin-bottom:18px; }
+    .footer-social { display:flex; gap:10px; }
+    .footer-social a {
+      background: var(--steel); color:var(--muted2);
+      padding:6px 14px; border-radius: var(--radius); font-size:0.8rem; font-weight:600;
+      transition: background var(--trans), color var(--trans);
+    }
+    .footer-social a:hover { background: var(--accent); color: var(--ink); }
+    .footer-col h4 { font-size:0.8rem; font-weight:700; letter-spacing:1.5px; color: #fff; margin-bottom:16px; }
+    .footer-col ul { list-style:none; }
+    .footer-col ul li { margin-bottom:9px; font-size:0.85rem; }
+    .footer-col ul li a { color:var(--muted); transition:color var(--trans); }
+    .footer-col ul li a:hover { color:var(--accent); }
+    .footer-bottom { padding:18px 0; }
+    .footer-bottom-inner { display:flex; justify-content:space-between; align-items:center; font-size:0.8rem; color:#3D5468; }
+    .footer-bottom-inner a { color:#3D5468; margin-left:20px; transition:color var(--trans); }
+    .footer-bottom-inner a:hover { color:var(--accent); }
+
+    [id] { scroll-margin-top:72px; }
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:1024px) {
+      .industries-grid { grid-template-columns:repeat(2,1fr); }
+      .footer-grid { grid-template-columns:repeat(2,1fr); }
+    }
+    @media(max-width:768px) {
+      .nav-toggle { display:block; }
+      .nav-links { display:none; flex-direction:column; position:absolute; top:62px; left:0; right:0; background:var(--ink2); padding:16px; gap:2px; z-index:999; border-bottom:1px solid rgba(0,200,160,0.2); }
+      .nav-links.open { display:flex; }
+      .dropdown-menu { position:static; opacity:1; visibility:visible; transform:none; box-shadow:none; background:transparent; border:none; padding:0 0 0 16px; display:none; }
+      .dropdown.open .dropdown-menu { display:block; }
+      .hero-inner, .what-grid, .twin-feature-grid { grid-template-columns:1fr; gap:36px; }
+      .services-grid, .portfolio-grid, .why-grid { grid-template-columns:1fr; }
+      .hero { padding:70px 0 50px; min-height:auto; }
+      .hero h1 { font-size:2.1rem; }
+      .industries-grid { grid-template-columns:repeat(2,1fr); }
+      .footer-grid { grid-template-columns:1fr; }
+      .section-pad { padding:60px 0; }
+      .twin-modules { grid-template-columns:1fr 1fr; }
+    }
+  </style>
 </head>
 <body>
 
-<!-- TOP BAR -->
-<div class="topbar">
-  <div class="container topbar-inner">
-    <span>📍 1901-5000 Yonge Street, Toronto M2N7E9</span>
-    <span>📞 <a href="tel:+14379621288">+1 437 962 1288</a> &nbsp;|&nbsp; ✉️ <a href="mailto:info@roboblabs.com">info@roboblabs.com</a></span>
-  </div>
-</div>
-
-<!-- NAVIGATION -->
-<nav class="navbar" id="navbar">
-  <div class="container nav-inner">
-    <a href="index.html" class="logo">
-      <img src="logo.png" alt="Robok Labs" class="logo-img"/>
-      <span class="logo-text">Robok<span class="logo-accent">Labs</span></span>
-    </a>
-    <button class="nav-toggle" id="navToggle">&#9776;</button>
-    <ul class="nav-links" id="navLinks">
-      <li class="dropdown">
-        <a href="services.html">Design ▾</a>
-        <ul class="dropdown-menu">
-          <li><a href="services.html#hardware">Electronics Hardware Design</a></li>
-          <li><a href="services.html#firmware">Firmware Development</a></li>
-          <li><a href="services.html#fpga">FPGA Design</a></li>
-          <li><a href="services.html#software">Software Development</a></li>
-          <li><a href="services.html#app">App Development</a></li>
-          <li><a href="services.html#industrial">Industrial Design</a></li>
-          <li><a href="services.html#mechanical">Mechanical Design</a></li>
-          <li><a href="services.html#uiux">UI/UX Design</a></li>
-          <li><a href="services.html#prototyping">Prototyping</a></li>
-          <li><a href="services.html#testing">Testing Support</a></li>
-          <li><a href="services.html#certification">Qualification &amp; Certification</a></li>
-        </ul>
-      </li>
-      <li class="dropdown">
-        <a href="manufacturing.html">Manufacturing ▾</a>
-        <ul class="dropdown-menu">
-          <li><a href="manufacturing.html#pcba">PCB Assembly</a></li>
-          <li><a href="manufacturing.html#boxbuild">Box Build Assembly</a></li>
-        </ul>
-      </li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li class="dropdown">
-        <a href="about.html">About ▾</a>
-        <ul class="dropdown-menu">
-          <li><a href="about.html#partners">Partners</a></li>
-          <li><a href="about.html#accreditation">Accreditation</a></li>
-          <li><a href="about.html#careers">Careers</a></li>
-        </ul>
-      </li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="contact.html" class="btn-nav">Get a Quote</a></li>
-    </ul>
-  </div>
-</nav>
-
-<!-- HERO SECTION -->
-<section class="hero">
-  <div class="hero-overlay"></div>
-  <div class="container hero-content">
-    <p class="hero-tag">TORONTO'S PREMIER</p>
-    <h1>Product Development<br/>and Manufacturing House</h1>
-    <p class="hero-sub">our design, your success!</p>
-    <a href="services.html" class="btn-primary">Learn More</a>
-  </div>
-  <div class="hero-card">
-    <div class="container">
-      <div class="mfg-card">
-        <h3>Manufactured here, done right.</h3>
-        <p>Meet your new manufacturing partner – expert PCB assembly &amp; box build services.</p>
-        <a href="manufacturing.html">Learn More →</a>
-      </div>
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>📍 1901-5000 Yonge Street, Toronto M2N 7E9</span>
+      <span>
+        <span class="topbar-badge">TORONTO</span>&nbsp;&nbsp;
+        📞 <a href="tel:+14379621288">+1 437 962 1288</a>
+        &nbsp;|&nbsp; ✉️ <a href="mailto:info@roboklabs.com">info@roboklabs.com</a>
+      </span>
     </div>
   </div>
-</section>
 
-<!-- WHAT WE DO -->
-<section class="what-we-do section-pad">
-  <div class="container">
-    <div class="two-col">
-      <div class="col-text">
-        <h2>What We Do</h2>
-        <p>Robok Labs is a product development and manufacturing company delivering turnkey electronic product design solutions throughout the entire product development lifecycle — from concept to mass production.</p>
-        <p>Our capabilities span <a href="services.html#hardware">hardware design</a>, <a href="services.html#firmware">embedded firmware</a>, <a href="services.html#software">software development</a>, <a href="services.html#app">application design and development</a>, <a href="services.html#mechanical">mechanical design</a>, <a href="services.html#industrial">industrial design</a>, <a href="services.html#uiux">graphic and UI/UX design</a>, <a href="services.html#prototyping">prototyping</a>, <a href="services.html#testing">testing support</a>, <a href="services.html#certification">qualification and certification</a>, high volume manufacturing, box build assembly, and PCB assembly.</p>
-        <a href="services.html" class="btn-primary">Our Services</a>
-      </div>
-      <div class="col-image">
-        <div class="image-placeholder">
-          <svg viewBox="0 0 500 350" xmlns="http://www.w3.org/2000/svg">
-            <rect width="500" height="350" fill="#0D1B2A"/>
-            <circle cx="250" cy="175" r="120" fill="none" stroke="#0077B6" stroke-width="2" opacity="0.4"/>
-            <circle cx="250" cy="175" r="80" fill="none" stroke="#00A3C4" stroke-width="2" opacity="0.5"/>
-            <circle cx="250" cy="175" r="40" fill="#0077B6" opacity="0.3"/>
-            <!-- PCB-like lines -->
-            <line x1="100" y1="100" x2="200" y2="100" stroke="#00A3C4" stroke-width="2"/>
-            <line x1="200" y1="100" x2="200" y2="175" stroke="#00A3C4" stroke-width="2"/>
-            <line x1="400" y1="100" x2="300" y2="100" stroke="#00A3C4" stroke-width="2"/>
-            <line x1="300" y1="100" x2="300" y2="175" stroke="#00A3C4" stroke-width="2"/>
-            <line x1="100" y1="250" x2="200" y2="250" stroke="#0077B6" stroke-width="2"/>
-            <line x1="200" y1="250" x2="200" y2="175" stroke="#0077B6" stroke-width="2"/>
-            <line x1="400" y1="250" x2="300" y2="250" stroke="#0077B6" stroke-width="2"/>
-            <line x1="300" y1="250" x2="300" y2="175" stroke="#0077B6" stroke-width="2"/>
-            <!-- Component squares -->
-            <rect x="85" y="88" width="24" height="24" fill="#0077B6" rx="2"/>
-            <rect x="391" y="88" width="24" height="24" fill="#0077B6" rx="2"/>
-            <rect x="85" y="238" width="24" height="24" fill="#00A3C4" rx="2"/>
-            <rect x="391" y="238" width="24" height="24" fill="#00A3C4" rx="2"/>
-            <text x="250" y="180" text-anchor="middle" fill="#00A3C4" font-size="14" font-family="Inter">ROBOK LABS</text>
-            <text x="250" y="200" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Inter" opacity="0.6">ENGINEERING EXCELLENCE</text>
-          </svg>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICE CARDS -->
-<section class="service-cards section-pad bg-light">
-  <div class="container">
-    <h2 class="section-title">Our Core Services</h2>
-    <div class="cards-grid three-col">
-      <div class="card">
-        <div class="card-icon">⚙️</div>
-        <h3>Design</h3>
-        <p>End-to-end engineering design services for electronic and software product development.</p>
-        <a href="services.html" class="card-link">Learn More →</a>
-      </div>
-      <div class="card">
-        <div class="card-icon">🔌</div>
-        <h3>PCB Assembly</h3>
-        <p>From design to prototyping to full-scale manufacturing — precision PCB assembly services.</p>
-        <a href="manufacturing.html#pcba" class="card-link">Learn More →</a>
-      </div>
-      <div class="card">
-        <div class="card-icon">📦</div>
-        <h3>Box Build Assembly</h3>
-        <p>Seamless system integration services for complete product box build assembly.</p>
-        <a href="manufacturing.html#boxbuild" class="card-link">Learn More →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- APPLICATIONS -->
-<section class="applications section-pad">
-  <div class="container">
-    <h2 class="section-title">Industries We Serve</h2>
-    <p class="section-sub">We have deployed custom electronics across a wide range of high-impact industries.</p>
-    <div class="apps-grid">
-      <div class="app-item">
-        <div class="app-icon">🏭</div>
-        <p>Industrial Control &amp; Automation</p>
-      </div>
-      <div class="app-item">
-        <div class="app-icon">🏥</div>
-        <p>Medical Electronics</p>
-      </div>
-      <div class="app-item">
-        <div class="app-icon">⌚</div>
-        <p>Wearable Electronics</p>
-      </div>
-      <div class="app-item">
-        <div class="app-icon">🏠</div>
-        <p>Home Automation</p>
-      </div>
-      <div class="app-item">
-        <div class="app-icon">🚗</div>
-        <p>Automotive Electronics</p>
-      </div>
-      <div class="app-item">
-        <div class="app-icon">🌐</div>
-        <p>Internet of Things</p>
-      </div>
-      <div class="app-item">
-        <div class="app-icon">🌱</div>
-        <p>CleanTech &amp; AgriTech</p>
-      </div>
-      <div class="app-item">
-        <div class="app-icon">📡</div>
-        <p>Consumer Electronics</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PORTFOLIO HIGHLIGHTS -->
-<section class="portfolio-section section-pad bg-dark">
-  <div class="container">
-    <h2 class="section-title white">Featured Projects</h2>
-    <p class="section-sub white">A selection of our completed product development engagements.</p>
-    <div class="cards-grid three-col">
-      <div class="port-card">
-        <div class="port-img port-img-1"></div>
-        <div class="port-body">
-          <h4>CO₂ Mineralization Technology</h4>
-          <p>Custom electronics for carbon capture and concrete curing technology.</p>
-        </div>
-      </div>
-      <div class="port-card">
-        <div class="port-img port-img-2"></div>
-        <div class="port-body">
-          <h4>Smart Wearable Security Device</h4>
-          <p>A wearable personal security IoT device with cloud connectivity.</p>
-        </div>
-      </div>
-      <div class="port-card">
-        <div class="port-img port-img-3"></div>
-        <div class="port-body">
-          <h4>Play Calling Smart System</h4>
-          <p>Electronics and firmware for a next-generation sports play-calling system.</p>
-        </div>
-      </div>
-    </div>
-    <div class="center-btn">
-      <a href="portfolio.html" class="btn-primary">See All Work</a>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="testimonials section-pad">
-  <div class="container">
-    <h2 class="section-title">What Our Clients Say</h2>
-    <div class="testimonials-grid">
-      <div class="testimonial">
-        <p>"Robok Labs has been an exceptional partner. Their attention to detail and deep engineering expertise helped us bring our product to market on time and on budget."</p>
-        <strong>— Michael S., Founder, IFTECH</strong>
-      </div>
-      <div class="testimonial">
-        <p>"The team at Robok Labs understood our vision from day one. Their firmware and hardware design capabilities are truly world-class."</p>
-        <strong>— Walter P., President, Varilume</strong>
-      </div>
-      <div class="testimonial">
-        <p>"Professional, responsive, and technically brilliant. Robok Labs is our go-to partner for all product development needs."</p>
-        <strong>— David B., CTO, Dynacert</strong>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PARTNERS -->
-<section class="partners section-pad bg-light">
-  <div class="container">
-    <h2 class="section-title">Official Design-House Partners</h2>
-    <div class="partners-row">
-      <div class="partner-logo">STMicro</div>
-      <div class="partner-logo">Microchip</div>
-      <div class="partner-logo">AVNET</div>
-      <div class="partner-logo">Nordic Semiconductor</div>
-      <div class="partner-logo">Renesas</div>
-      <div class="partner-logo">Arrow</div>
-      <div class="partner-logo">Analog Devices</div>
-      <div class="partner-logo">Silicon Labs</div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA SECTION -->
-<section class="cta-section">
-  <div class="container">
-    <h2>Discuss your next big idea with us!</h2>
-    <p>Our team of expert engineers is ready to help bring your product to life.</p>
-    <a href="contact.html" class="btn-primary-white">Get In Touch</a>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container footer-grid">
-    <div class="footer-col">
-      <div class="footer-logo"><img src="logo.png" alt="Robok Labs" class="footer-logo-img"/></div>
-      <p>Toronto-based product development &amp; manufacturing house. Engineering excellence from concept to production.</p>
-      <div class="footer-social">
-        <a href="#">LinkedIn</a>
-        <a href="#">Twitter</a>
-        <a href="#">Facebook</a>
-      </div>
-    </div>
-    <div class="footer-col">
-      <h4>Company</h4>
-      <ul>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="about.html#partners">Partners</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html#careers">Careers</a></li>
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="/" class="logo">
+        <img src="roboklabs_logo500x200.png" alt="Robok Labs" style="height:36px;width:auto;display:block;">
+        <span class="nav-brand">Robok<span>Labs</span></span>
+      </a>
+      <button class="nav-toggle" id="navToggle">&#9776;</button>
+      <ul class="nav-links" id="navLinks">
+        <li class="dropdown">
+          <a href="/services">Design ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="/services#hardware">Electronics Hardware Design</a></li>
+            <li><a href="/services#firmware">Firmware Development</a></li>
+            <li><a href="/services#software">Software Development</a></li>
+            <li><a href="/services#mechanical">Mechanical Design</a></li>
+            <li><a href="/services#prototyping">Prototyping</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="/manufacturing">Manufacturing ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="/manufacturing#pcba">PCB Assembly</a></li>
+            <li><a href="/manufacturing#boxbuild">Box Build Assembly</a></li>
+          </ul>
+        </li>
+        <li><a href="/portfolio">Portfolio</a></li>
+        <li class="dropdown"><a href="/about">About ▾</a><ul class="dropdown-menu"><li><a href="/about#partners">Partners</a></li><li><a href="/about#accreditation">Accreditations</a></li><li><a href="/about#careers">Careers</a></li></ul></li>
+        <li><a href="https://roboklabs.com/contact/">Contact</a></li>
+        <li><a href="https://roboklabs.com/contact/" class="btn-nav">Get a Quote</a></li>
       </ul>
     </div>
-    <div class="footer-col">
-      <h4>Design Services</h4>
-      <ul>
-        <li><a href="services.html#hardware">Electronics Hardware Design</a></li>
-        <li><a href="services.html#firmware">Firmware Development</a></li>
-        <li><a href="services.html#fpga">FPGA Design</a></li>
-        <li><a href="services.html#software">Software Development</a></li>
-        <li><a href="services.html#app">App Development</a></li>
-        <li><a href="services.html#industrial">Industrial Design</a></li>
-        <li><a href="services.html#mechanical">Mechanical Design</a></li>
-        <li><a href="services.html#uiux">UI/UX Design</a></li>
-        <li><a href="services.html#prototyping">Prototyping</a></li>
-        <li><a href="services.html#testing">Testing Support</a></li>
-        <li><a href="services.html#certification">Qualification &amp; Certification</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Manufacturing</h4>
-      <ul>
-        <li><a href="manufacturing.html#pcba">PCB Assembly</a></li>
-        <li><a href="manufacturing.html#boxbuild">Box Build Assembly</a></li>
-      </ul>
-      <h4 style="margin-top:20px;">Contact</h4>
-      <ul>
-        <li>📍 1901-5000 Yonge St,<br/>Toronto M2N7E9</li>
-        <li>📞 <a href="tel:+14379621288">+1 437 962 1288</a></li>
-        <li>✉️ <a href="mailto:info@roboblabs.com">info@roboblabs.com</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <div class="container footer-bottom-inner">
-      <p>©2026 Robok Labs Inc., Toronto, Canada</p>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-glow2"></div>
+    <div class="container hero-inner">
       <div>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Accessibility</a>
+        <div class="hero-eyebrow">INDUSTRIAL AUTOMATION · TORONTO</div>
+        <h1>Electronics Design<br>Built for <em>Industry</em></h1>
+        <p class="hero-desc">From schematic to factory floor — Robok Labs engineers end-to-end electronics products for industrial automation, embedded systems, and intelligent manufacturing.</p>
+        <div class="hero-actions">
+          <a href="https://roboklabs.com/contact/" class="btn btn-primary">Start Your Project</a>
+          <a href="/portfolio" class="btn btn-outline">View Our Work</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="stat-num">End<span>-to-</span>End</div>
+            <div class="stat-label">Concept to production</div>
+          </div>
+          <div class="hero-stat">
+            <div class="stat-num">IPC<span>/</span>IEC</div>
+            <div class="stat-label">Standards-aligned design</div>
+          </div>
+          <div class="hero-stat">
+            <div class="stat-num"><span>&#x2713;</span> PCBA</div>
+            <div class="stat-label">In-house PCB assembly</div>
+          </div>
+          <div class="hero-stat">
+            <div class="stat-num">SR<span>&</span>ED</div>
+            <div class="stat-label">R&D tax eligible</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-circuit">
+          <div class="circuit-label">DIGITAL TWIN · LIVE MONITOR</div>
+          <div class="twin-modules">
+            <div class="twin-mod">
+              <div class="twin-mod-title">Machine OEE</div>
+              <div class="twin-mod-val">94.2%</div>
+              <div class="twin-mod-sub">Overall efficiency</div>
+              <div class="pulse-bar"></div>
+            </div>
+            <div class="twin-mod">
+              <div class="twin-mod-title">Cycle Time</div>
+              <div class="twin-mod-val">2.4s</div>
+              <div class="twin-mod-sub">Avg per unit</div>
+              <div class="pulse-bar delay"></div>
+            </div>
+            <div class="twin-mod">
+              <div class="twin-mod-title">Sensor Temp</div>
+              <div class="twin-mod-val">67°C</div>
+              <div class="twin-mod-sub">Within spec</div>
+              <div class="pulse-bar"></div>
+            </div>
+            <div class="twin-mod">
+              <div class="twin-mod-title">Active Nodes</div>
+              <div class="twin-mod-val">18</div>
+              <div class="twin-mod-sub">0 faults</div>
+              <div class="pulse-bar delay"></div>
+            </div>
+          </div>
+          <div class="twin-status">
+            <div class="status-dot"></div>
+            Digital twin synced — real-time telemetry active
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</footer>
+  </section>
 
-<script src="script.js"></script>
+  <!-- LOGO BAR -->
+  <div class="logobar">
+    <div class="container logobar-inner">
+      <span class="logobar-label">CAPABILITY AREAS</span>
+      <div class="logobar-item">Hardware Design</div>
+      <div class="logobar-item">Firmware / RTOS</div>
+      <div class="logobar-item">PCB Assembly</div>
+      <div class="logobar-item">Digital Twins</div>
+      <div class="logobar-item">Box Build</div>
+      <div class="logobar-item">Industrial IoT</div>
+    </div>
+  </div>
+
+  <!-- WHAT WE DO -->
+  <section class="section-pad" id="about">
+    <div class="container">
+      <div class="what-grid">
+        <div class="what-text">
+          <div class="section-eyebrow">WHAT WE DO</div>
+          <div class="divider"></div>
+          <h2 class="section-title">One partner.<br>The full lifecycle.</h2>
+          <p>Robok Labs is a Toronto-based electronics product design and manufacturing company. We take products from an idea to a production-ready reality — handling every step so you don't have to stitch together multiple vendors.</p>
+          <p>Our core domain is <strong>industrial automation</strong>: ruggedized control electronics, embedded sensing platforms, and industrial-grade digital twins that give plant operators real-time visibility into their machines.</p>
+          <a href="/services" class="btn btn-dark" style="margin-top:10px;">Explore Services</a>
+        </div>
+        <div class="what-image">
+          <div class="circuit-label" style="margin-bottom:20px;">PRODUCT DEVELOPMENT LIFECYCLE</div>
+          <div class="lifecycle-steps">
+            <div class="lifecycle-step">
+              <div class="step-num">01</div>
+              <div class="step-body">
+                <h4>Concept & Requirements</h4>
+                <p>System architecture, requirements capture, feasibility analysis</p>
+              </div>
+            </div>
+            <div class="lifecycle-step">
+              <div class="step-num">02</div>
+              <div class="step-body">
+                <h4>Hardware & Firmware Design</h4>
+                <p>Schematic capture, PCB layout, embedded software, RTOS integration</p>
+              </div>
+            </div>
+            <div class="lifecycle-step">
+              <div class="step-num">03</div>
+              <div class="step-body">
+                <h4>Prototyping & Validation</h4>
+                <p>Rapid prototyping, functional testing, EMC pre-compliance</p>
+              </div>
+            </div>
+            <div class="lifecycle-step">
+              <div class="step-num">04</div>
+              <div class="step-body">
+                <h4>PCB & Box Build Assembly</h4>
+                <p>In-house PCBA, full system integration, final QA</p>
+              </div>
+            </div>
+            <div class="lifecycle-step">
+              <div class="step-num">05</div>
+              <div class="step-body">
+                <h4>Production & Support</h4>
+                <p>Volume manufacturing, design-for-manufacture optimization, sustaining</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORE SERVICES -->
+  <section class="section-pad bg-light" id="services">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-eyebrow">CORE SERVICES</div>
+        <div class="divider centered"></div>
+        <h2 class="section-title">Engineering, end to end.</h2>
+        <p class="section-sub centered">Deep technical capability across the full electronics design and manufacturing stack.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">⚡</div>
+          <h3>Electronics Hardware Design</h3>
+          <p>Schematic capture, multi-layer PCB layout, signal integrity analysis, power management, and design-for-manufacturability for industrial-grade products.</p>
+          <a href="/services#hardware" class="service-link">Learn More</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💾</div>
+          <h3>Firmware & Embedded Software</h3>
+          <p>Bare-metal and RTOS development, sensor integration, motor control, communication stacks (CAN, Modbus, MQTT, OPC-UA), and field update capabilities.</p>
+          <a href="/services#firmware" class="service-link">Learn More</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🖥️</div>
+          <h3>Software & Application Dev</h3>
+          <p>HMI applications, SCADA integration, cloud dashboards, and the software layer that connects your hardware to operators and data systems.</p>
+          <a href="/services#software" class="service-link">Learn More</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">⚙️</div>
+          <h3>Mechanical & Industrial Design</h3>
+          <p>Enclosure design, thermal management, DIN rail packaging, IP-rated housing, and human factors for industrial environments.</p>
+          <a href="/services#mechanical" class="service-link">Learn More</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔌</div>
+          <h3>PCB Assembly</h3>
+          <p>Prototype to production PCB assembly with SMT, through-hole, BGA, and full quality inspection. Manufacturing-ready from day one.</p>
+          <a href="/manufacturing#pcba" class="service-link">Learn More</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📦</div>
+          <h3>Box Build & System Integration</h3>
+          <p>Complete product integration: wiring harnesses, enclosure population, cable assemblies, and final functional testing before shipment.</p>
+          <a href="/manufacturing#boxbuild" class="service-link">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIGITAL TWIN FEATURE -->
+  <section class="twin-section" id="digital-twin">
+    <div class="twin-section-glow"></div>
+    <div class="container">
+      <div class="twin-feature-grid">
+        <div>
+          <div class="twin-feature-badge">FLAGSHIP PRODUCT</div>
+          <h2>Industrial Digital Twin Platform</h2>
+          <p>Our digital twin technology creates a live virtual replica of your industrial equipment — giving you real-time visibility, predictive insights, and remote diagnostics without stepping on the factory floor.</p>
+          <ul class="twin-bullets">
+            <li>Real-time sensor telemetry with edge processing</li>
+            <li>OEE, downtime, and cycle-time analytics</li>
+            <li>Predictive maintenance alerts before failures occur</li>
+            <li>Integrates with existing PLCs and SCADA systems</li>
+            <li>Custom dashboard tailored to your process</li>
+          </ul>
+          <a href="https://roboklabs.com/contact/" class="btn btn-primary">Request a Demo</a>
+        </div>
+        <div class="twin-dashboard">
+          <div class="dash-header">
+            <span class="dash-title">CanLine-A3 · Assembly Station</span>
+            <span class="dash-live"><span class="dash-dot"></span>LIVE</span>
+          </div>
+          <div class="dash-grid">
+            <div class="dash-metric">
+              <div class="dash-metric-val green">94.2%</div>
+              <div class="dash-metric-label">OEE Score</div>
+            </div>
+            <div class="dash-metric">
+              <div class="dash-metric-val">2.4s</div>
+              <div class="dash-metric-label">Cycle Time</div>
+            </div>
+            <div class="dash-metric">
+              <div class="dash-metric-val amber">2</div>
+              <div class="dash-metric-label">Alerts</div>
+            </div>
+          </div>
+          <div class="dash-bars">
+            <div class="dash-bar-row">
+              <span class="dash-bar-label">Availability</span>
+              <div class="dash-bar-track"><div class="dash-bar-fill" style="width:97%"></div></div>
+              <span class="dash-bar-val">97%</span>
+            </div>
+            <div class="dash-bar-row">
+              <span class="dash-bar-label">Performance</span>
+              <div class="dash-bar-track"><div class="dash-bar-fill" style="width:89%;background:#F59E0B"></div></div>
+              <span class="dash-bar-val">89%</span>
+            </div>
+            <div class="dash-bar-row">
+              <span class="dash-bar-label">Quality</span>
+              <div class="dash-bar-track"><div class="dash-bar-fill" style="width:98%"></div></div>
+              <span class="dash-bar-val">98%</span>
+            </div>
+            <div class="dash-bar-row">
+              <span class="dash-bar-label">Temp Zone A</span>
+              <div class="dash-bar-track"><div class="dash-bar-fill" style="width:67%;background:#E55C3A"></div></div>
+              <span class="dash-bar-val">67°C</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES -->
+  <section class="section-pad" id="industries">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-eyebrow">INDUSTRIES</div>
+        <div class="divider centered"></div>
+        <h2 class="section-title">Where we deliver.</h2>
+        <p class="section-sub centered">We focus where precision electronics matter most.</p>
+      </div>
+      <div class="industries-grid">
+        <div class="industry-card featured">
+          <div class="industry-icon">🏭</div>
+          <p>Industrial Control & Automation</p>
+        </div>
+        <div class="industry-card featured">
+          <div class="industry-icon">🤖</div>
+          <p>Robotics & Cobot Systems</p>
+        </div>
+        <div class="industry-card">
+          <div class="industry-icon">🏥</div>
+          <p>Medical Electronics</p>
+        </div>
+        <div class="industry-card">
+          <div class="industry-icon">⌚</div>
+          <p>Wearable Electronics</p>
+        </div>
+        <div class="industry-card">
+          <div class="industry-icon">🚗</div>
+          <p>Automotive Electronics</p>
+        </div>
+        <div class="industry-card">
+          <div class="industry-icon">🌐</div>
+          <p>Industrial IoT</p>
+        </div>
+        <div class="industry-card">
+          <div class="industry-icon">🌱</div>
+          <p>CleanTech & AgriTech</p>
+        </div>
+        <div class="industry-card">
+          <div class="industry-icon">🏠</div>
+          <p>Building Automation</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section class="section-pad bg-dark" id="projects">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-eyebrow" style="color:var(--accent)">PORTFOLIO</div>
+        <div class="divider centered"></div>
+        <h2 class="section-title white">Featured Work</h2>
+        <p class="section-sub white centered">Representative projects from our engineering team.</p>
+      </div>
+      <div class="portfolio-grid">
+        <div class="port-card">
+          <div class="port-thumb port-thumb-1">
+            <span class="port-tag">INDUSTRIAL AUTOMATION</span>
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none"><rect x="10" y="30" width="60" height="20" rx="3" stroke="#00C8A0" stroke-width="1"/><rect x="20" y="20" width="12" height="12" rx="2" stroke="#00C8A0" stroke-width="1"/><rect x="48" y="20" width="12" height="12" rx="2" stroke="#00C8A0" stroke-width="1"/><circle cx="25" cy="58" r="8" stroke="#00C8A0" stroke-width="1"/><circle cx="55" cy="58" r="8" stroke="#00C8A0" stroke-width="1"/></svg>
+          </div>
+          <div class="port-body">
+            <h4>Industrial Monitoring System</h4>
+            <p>Embedded electronics and edge-processing platform for machine visibility, diagnostics, and real-time OEE tracking on the factory floor.</p>
+          </div>
+        </div>
+        <div class="port-card">
+          <div class="port-thumb port-thumb-2">
+            <span class="port-tag">WEARABLE</span>
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none"><rect x="28" y="15" width="24" height="30" rx="6" stroke="#00C8A0" stroke-width="1"/><line x1="40" y1="45" x2="40" y2="60" stroke="#00C8A0" stroke-width="1"/><circle cx="40" cy="64" r="5" stroke="#00C8A0" stroke-width="1"/><line x1="28" y1="25" x2="18" y2="25" stroke="#00C8A0" stroke-width="1"/><line x1="52" y1="25" x2="62" y2="25" stroke="#00C8A0" stroke-width="1"/></svg>
+          </div>
+          <div class="port-body">
+            <h4>Smart Wearable Device</h4>
+            <p>Connected biometric hardware platform with low-power firmware, multi-sensor fusion, and cloud telemetry for industrial worker safety monitoring.</p>
+          </div>
+        </div>
+        <div class="port-card">
+          <div class="port-thumb port-thumb-3">
+            <span class="port-tag">CONTROL ELECTRONICS</span>
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none"><rect x="15" y="20" width="50" height="40" rx="4" stroke="#F59E0B" stroke-width="1"/><circle cx="28" cy="40" r="5" stroke="#F59E0B" stroke-width="1"/><rect x="38" y="30" width="18" height="6" rx="2" stroke="#F59E0B" stroke-width="1"/><rect x="38" y="42" width="18" height="6" rx="2" stroke="#F59E0B" stroke-width="1"/></svg>
+          </div>
+          <div class="port-body">
+            <h4>Advanced Control Electronics</h4>
+            <p>Custom multi-axis motor control board with real-time feedback loops, isolated I/O, and hardened firmware for high-reliability industrial deployment.</p>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:40px;">
+        <a href="/portfolio" class="btn btn-outline">View Full Portfolio</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY ROBOK -->
+  <section class="section-pad bg-ink" id="why">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-eyebrow" style="color:var(--accent)">WHY ROBOK LABS</div>
+        <div class="divider centered"></div>
+        <h2 class="section-title white">Engineering you can build on.</h2>
+        <p class="section-sub white centered">We're not a body shop. We're a technical partner invested in your product succeeding.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">🔩</div>
+          <h3>Industrial-grade standards</h3>
+          <p>We design to IPC, IEC 61131, and industrial environmental ratings from day one — not as an afterthought. Your product is built for real factory conditions.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🇨🇦</div>
+          <h3>Canadian-owned, SR&ED eligible</h3>
+          <p>CCPC-incorporated and based in Toronto. R&D work may qualify for SR&ED tax credits and IRAP support — giving your project a funding advantage.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">⚡</div>
+          <h3>Full-stack, single vendor</h3>
+          <p>Hardware, firmware, software, manufacturing — one team, one contract, one responsibility chain. No finger-pointing between design and production.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🖥️</div>
+          <h3>Digital twin expertise</h3>
+          <p>We don't just design the hardware — we build the software layer that makes it smart. Our digital twin platform is developed in-house, not licensed from a third party.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" id="contact">
+    <div class="cta-glow"></div>
+    <div class="container">
+      <h2>Ready to build your next product?</h2>
+      <p>Tell us about your project and we'll get back to you within one business day.</p>
+      <div class="cta-actions">
+        <a href="https://roboklabs.com/contact/" class="btn btn-primary">Get a Free Quote</a>
+        <a href="mailto:info@roboklabs.com" class="btn btn-outline">Email Us Directly</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo"><img src="roboklabs_logo500x200.png" alt="Robok Labs" style="height:32px;width:auto;display:block;margin-bottom:14px;"></div>
+        <p>Toronto-based electronics product design and manufacturing house. End-to-end, from schematic to shipment, focused on industrial automation.</p>
+        <div class="footer-social">
+          <a href="https://linkedin.com/company/roboklabs" target="_blank">LinkedIn</a>
+          <a href="https://twitter.com/roboklabs" target="_blank">X / Twitter</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>COMPANY</h4>
+        <ul>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/portfolio">Portfolio</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="https://roboklabs.com/contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>CAPABILITIES</h4>
+        <ul>
+          <li><a href="/services#hardware">Hardware Design</a></li>
+          <li><a href="/services#firmware">Firmware Development</a></li>
+          <li><a href="/services#software">Software & HMI</a></li>
+          <li><a href="/services#mechanical">Mechanical Design</a></li>
+          <li><a href="/manufacturing#pcba">PCB Assembly</a></li>
+          <li><a href="/manufacturing#boxbuild">Box Build</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>CONTACT</h4>
+        <ul>
+          <li>📍 1901-5000 Yonge St,<br>Toronto M2N 7E9</li>
+          <li>📞 <a href="tel:+14379621288">+1 437 962 1288</a></li>
+          <li>✉️ <a href="mailto:info@roboklabs.com">info@roboklabs.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© 2026 Robok Labs Inc., Toronto, Canada</p>
+        <div>
+          <a href="https://roboklabs.com/privacy-policy/">Privacy Policy</a>
+          <a href="https://roboklabs.com/accessibility/">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+
+    dropdowns.forEach(d => {
+      d.querySelector('a').addEventListener('click', e => {
+        if(window.innerWidth < 768) {
+          e.preventDefault();
+          d.classList.toggle('open');
+        }
+      });
+    });
+
+    document.addEventListener('click', e => {
+      if(!e.target.closest('.navbar')) navLinks.classList.remove('open');
+    });
+  </script>
 </body>
 </html>

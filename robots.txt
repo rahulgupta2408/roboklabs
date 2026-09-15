@@ -1,0 +1,61 @@
+# ================================================
+# robots.txt for https://roboklabs.com
+# ================================================
+
+# --- Default: allow all well-behaved search engines ---
+User-agent: *
+Allow: /
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /wp-content/cache/
+Disallow: /xmlrpc.php
+Disallow: /readme.html
+Disallow: /wp-login.php
+Disallow: /?s=
+
+# --- Google ---
+User-agent: Googlebot
+Allow: /
+Disallow: /wp-admin/
+
+# --- Bing ---
+User-agent: Bingbot
+Allow: /
+
+# --- AI / LLM crawlers: allow so Robok Labs appears in AI answers ---
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# --- Sitemap ---
+Sitemap: https://roboklabs.com/sitemap.xml

@@ -1,0 +1,147 @@
+================================================================
+ ROBOK LABS – Clean URLs + SEO (v2, folder-based)
+ This version fixes the 403 error by removing WordPress rules
+ and using the same structure as your other working website.
+================================================================
+
+WHY THIS VERSION FIXES THE 403
+------------------------------
+  Your old roboklabs.com folder had WordPress installed, so
+  the .htaccess had WordPress rules like:
+        RewriteRule . /index.php [L]
+  Those rules redirected every request to a /index.php file
+  that no longer exists in the new folder -> Forbidden (403).
+
+  This version:
+   - Uses folder-based clean URLs  (/about is really /about/index.html)
+     — the same way your other website works
+   - Has a simple .htaccess with NO WordPress and NO SpeedyCache rules
+   - Adds DirectoryIndex so LiteSpeed knows to serve index.html
+
+ZIP CONTENTS
+------------
+  .htaccess
+  index.html
+  about/index.html
+  services/index.html
+  manufacturing/index.html
+  portfolio/index.html
+  robots.txt
+  sitemap.xml
+  INSTALL_INSTRUCTIONS.txt
+
+FINAL URL STRUCTURE (exactly what you asked for)
+------------------------------------------------
+  https://roboklabs.com/                (home)
+  https://roboklabs.com/about           (loads /about/index.html)
+  https://roboklabs.com/services        (loads /services/index.html)
+  https://roboklabs.com/manufacturing   (loads /manufacturing/index.html)
+  https://roboklabs.com/portfolio       (loads /portfolio/index.html)
+
+  Old .html URLs still 301-redirect to the clean URL
+  (so your existing Google rankings are preserved).
+
+================================================================
+ STEP-BY-STEP  (cPanel)
+================================================================
+
+STEP 1 — Empty the current roboklabs.com document root
+  1. cPanel -> File Manager.
+  2. Go to the document root that cPanel is using for
+     roboklabs.com (check cPanel -> Domains if unsure).
+     From what you told me, it is:
+            /home/earthlyf/roboklabs.com/
+  3. Turn on Settings -> "Show Hidden Files (dotfiles)".
+  4. Select EVERYTHING inside that folder (Ctrl+A) and delete.
+     Leave the roboklabs.com folder itself, just empty it out.
+
+STEP 2 — Upload & extract the new zip
+  1. Still inside /home/earthlyf/roboklabs.com/, click "Upload".
+  2. Upload  roboklabs_update_v2.zip
+  3. Back in File Manager, right-click the zip -> "Extract"
+     -> Extract into  /home/earthlyf/roboklabs.com
+  4. After extracting, you should see these items DIRECTLY
+     inside /home/earthlyf/roboklabs.com/:
+
+       .htaccess
+       index.html
+       robots.txt
+       sitemap.xml
+       INSTALL_INSTRUCTIONS.txt
+       about/            (folder)
+       services/         (folder)
+       manufacturing/    (folder)
+       portfolio/        (folder)
+
+  5. Delete the uploaded zip file (right-click -> Delete).
+
+STEP 3 — Set permissions
+  1. Click into /home/earthlyf/roboklabs.com/
+  2. Select all -> right-click -> Change Permissions
+       - Tick "Recurse into subdirectories"
+       - Tick "Apply to files only"
+       - Value: 644  -> Apply
+  3. Select all -> right-click -> Change Permissions again
+       - Tick "Recurse into subdirectories"
+       - Tick "Apply to folders only"
+       - Value: 755  -> Apply
+  4. Right-click the roboklabs.com folder itself -> 755.
+
+STEP 4 — Clear caches
+  1. If Cloudflare is in front of your site:
+        Cloudflare Dashboard -> Caching -> Purge Everything
+  2. In cPanel, if a LiteSpeed Cache icon exists, open it
+     and click "Flush All".
+  3. Hard-refresh your browser: Ctrl+Shift+R (Windows/Linux)
+     or Cmd+Shift+R (Mac).
+
+STEP 5 — Test in INCOGNITO mode
+  Open a NEW incognito / private window and try each URL:
+
+        https://roboklabs.com/                -> home page
+        https://roboklabs.com/about           -> About page
+        https://roboklabs.com/services        -> Services page
+        https://roboklabs.com/manufacturing   -> Manufacturing page
+        https://roboklabs.com/portfolio       -> Portfolio page
+
+  Also verify the 301 redirects work:
+        https://roboklabs.com/about.html      -> redirects to /about
+        https://roboklabs.com/services.html   -> redirects to /services
+
+  And confirm SEO files are live:
+        https://roboklabs.com/robots.txt
+        https://roboklabs.com/sitemap.xml
+
+================================================================
+ IF 403 STILL APPEARS AFTER STEP 5
+================================================================
+  1. Rename .htaccess to htaccess.disabled and reload.
+     - If the site loads (maybe plain/broken) -> the .htaccess
+       has a syntax conflict. Tell me and I will send a
+       further-stripped version.
+     - If still 403 -> this is a server-level permission /
+       ownership issue (files owned by nobody or root instead
+       of "earthlyf"). Contact your host with this message:
+
+       "Please run this command on my account:
+            chown -R earthlyf:earthlyf /home/earthlyf/roboklabs.com
+        And confirm mod_rewrite and mod_headers are enabled."
+
+================================================================
+ STEP 6 — Submit to search engines (do this once after site loads)
+================================================================
+  GOOGLE SEARCH CONSOLE:
+    1. https://search.google.com/search-console
+    2. Add property -> roboklabs.com
+    3. Verify ownership (DNS TXT or HTML file)
+    4. Sitemaps -> add  sitemap.xml  -> Submit
+    5. URL Inspection -> paste each clean URL ->
+       "Request Indexing"
+
+  BING WEBMASTER TOOLS:
+    1. https://www.bing.com/webmasters
+    2. Add site, verify, submit sitemap.xml
+
+================================================================
+ END
+================================================================
