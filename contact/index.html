@@ -256,7 +256,8 @@
         ✅ Thanks for reaching out — your message has been delivered to our team. We'll reply within one business day.
       </div>
       <div id="alertError" class="alert alert-error" style="display:none;">
-        ⚠️ Something went wrong sending your message. Please email us directly at <a href="mailto:info@roboklabs.com">info@roboklabs.com</a> or call +1 437 962 1288.
+        <span id="alertErrorText">⚠️ Something went wrong sending your message.</span>
+        Please email us directly at <a href="mailto:info@roboklabs.com">info@roboklabs.com</a> or call +1 437 962 1288.
       </div>
 
       <div class="contact-grid">
@@ -306,7 +307,7 @@
             <h2>Send Us a Message</h2>
             <p class="form-lead">Fill in the form — we reply within 1 business day.</p>
 
-            <form action="/contact/send.php" method="POST" id="contactForm" novalidate>
+            <form action="/contact/send.php" method="POST" id="contactForm">
               <div class="form-row two-col">
                 <div>
                   <label for="name">Full Name <span class="req">*</span></label>
@@ -431,7 +432,16 @@
     // Show banner based on query string after redirect from send.php
     const params = new URLSearchParams(window.location.search);
     if(params.get('sent') === '1'){ document.getElementById('alertSuccess').style.display = 'block'; }
-    if(params.get('error')){ document.getElementById('alertError').style.display = 'block'; }
+    if(params.get('error')){
+      const messages = {
+        missing_fields: '⚠️ Please fill in your name, email, subject and message.',
+        invalid_email:  '⚠️ That email address doesn\'t look right — please check it and try again.',
+        mail_failed:    '⚠️ Our mail server could not send your message right now.'
+      };
+      document.getElementById('alertErrorText').textContent =
+        messages[params.get('error')] || '⚠️ Something went wrong sending your message.';
+      document.getElementById('alertError').style.display = 'block';
+    }
 
     // Clean URL after showing the banner (prevents refresh-resubmit)
     if(params.has('sent') || params.has('error')){
